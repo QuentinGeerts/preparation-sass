@@ -1,0 +1,130 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  font-size: 1.1em;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: 10px auto 15px;
+}
+
+header h1 + h2 {
+  margin: 30px auto;
+  color: #333333c9;
+}
+
+.center {
+  text-align: center;
+}
+
+/*
+ * Navigation
+ */
+
+nav {
+  border: 1px dashed #3333333a;
+
+}
+
+nav ul {
+  columns: 3;
+  padding: 0;
+}
+
+nav ul li {
+  list-style-type: none;
+  padding: 3px 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+nav ul li a:hover {
+  color: #aaaaaa;
+}
+
+@media only screen and (max-width: 1230px) {
+  nav ul {
+    columns: 2;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  nav ul {
+    columns: 1;
+  }
+}
+
+
+
+/*
+ * Section
+ */
+
+section {
+  /* border: 1px solid black; */
+  margin: 10px 0;
+  padding: 10px 0;
+
+  text-align: justify;
+}
+
+section h1,
+section h1 a {
+  transition: .4s;
+  color: black;
+}
+
+section h1:hover,
+section h1 a:hover {
+  transition: .4s;
+  color: #3333333a;
+}
+
+/*
+ * Tools
+ */
+
+hr {
+  opacity: .1;
+  border-style: dashed;
+}
+
+code {
+  background-color: #333;
+  padding: 5px 15px;
+  border-radius: 5px;
+  color: white;
+
+}
+
+button#btn-top {
+  display: none;
+  border: none;
+  outline: none;
+
+  font-size: .8em;
+
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+
+  z-index: 99;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 4px;
+  
+  background-color: #333;
+  color: white;
+}
+
+button#btn-top:hover {
+  background-color: #33333380;
+  color: #333;
+}
