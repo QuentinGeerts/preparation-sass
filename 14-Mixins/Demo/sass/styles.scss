@@ -1,0 +1,29 @@
+/* 01 - Syntax Scss */
+
+/*
+ * Ce commentaire sera affiché dans le CSS 
+ * parce qu'il respecte la syntaxe CSS
+ */
+
+$bg-color: #ffffff;
+$text-color: #333;
+$baseline: 1.5em;
+
+body {
+  background-color: $bg-color;
+  color: $text-color;
+
+  p {
+    color: lighten($color: $text-color, $amount: 10%)
+  }
+
+}
+
+.container {
+  margin: $baseline * 2; padding: calc($baseline / 2);
+}
+
+#sidebar ol li,
+footer {
+  padding: $baseline;
+}
