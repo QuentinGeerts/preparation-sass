@@ -10,6 +10,7 @@
 
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="02-Nesting/Demo/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
 </head>
 
 <body>
@@ -17,8 +18,8 @@
   <div class="container">
 
     <header>
-      <h1>Technobel - Javascript</h1>
-      <h2>Apprendre Sass</h2>
+      <h1>Cours</h1>
+      <h2>Sass</h2>
     </header>
 
     <nav>
@@ -45,7 +46,7 @@
 
       <section id="introduction">
         <header>
-          <h1>Introduction</h1>
+          <h1><a href="#introduction">Introduction</a></h1>
         </header>
 
         <hr>
@@ -70,7 +71,7 @@
 
       <section id="syntax">
         <header>
-          <h1>Syntax</h1>
+          <h1><a href="#syntax">Syntax</a></h1>
         </header>
 
         <hr>
@@ -91,7 +92,7 @@
       </section>
       <section id="nesting">
         <header>
-          <h1>Nesting</h1>
+          <h1><a href="#nesting">Nesting</a></h1>
         </header>
 
         <hr>
@@ -112,7 +113,7 @@
       </section>
       <section id="nested-properties">
         <header>
-          <h1>Nested properties</h1>
+          <h1><a href="#nested-properties">Nested properties</a></h1>
         </header>
 
         <hr>
@@ -133,7 +134,7 @@
       </section>
       <section id="variables">
         <header>
-          <h1>Variables</h1>
+          <h1><a href="#variables">Variables</a></h1>
         </header>
 
         <hr>
@@ -154,7 +155,7 @@
       </section>
       <section id="interpolation">
         <header>
-          <h1>Interpolation</h1>
+          <h1><a href="#interpolation">Interpolation</a></h1>
         </header>
 
         <hr>
@@ -176,7 +177,7 @@
 
       <section id="data-types">
         <header>
-          <h1>Data types</h1>
+          <h1><a href="#data-types">Data types</a></h1>
         </header>
 
         <hr>
@@ -198,7 +199,7 @@
 
       <section id="operations">
         <header>
-          <h1>Operations</h1>
+          <h1><a href="#operations">Operations</a></h1>
         </header>
 
         <hr>
@@ -220,7 +221,7 @@
 
       <section id="import-directive">
         <header>
-          <h1>@import directive</h1>
+          <h1><a href="#import-directive">@import directive</a></h1>
         </header>
 
         <hr>
@@ -242,7 +243,7 @@
 
       <section id="partials">
         <header>
-          <h1>Partials</h1>
+          <h1><a href="#partials">Partials</a></h1>
         </header>
 
         <hr>
@@ -264,7 +265,7 @@
 
       <section id="media-directive">
         <header>
-          <h1>@media directive</h1>
+          <h1><a href="#media-directive">@media directive</a></h1>
         </header>
 
         <hr>
@@ -286,7 +287,7 @@
 
       <section id="extend-directive">
         <header>
-          <h1>@extend directive</h1>
+          <h1><a href="#extend-directive">@extend directive</a></h1>
         </header>
 
         <hr>
@@ -308,7 +309,7 @@
 
       <section id="if-for-directives">
         <header>
-          <h1>@if and @for directives</h1>
+          <h1><a href="#if-for-directives">@if and @for directives</a></h1>
         </header>
 
         <hr>
@@ -330,7 +331,7 @@
 
       <section id="each-while-directives">
         <header>
-          <h1>@each and @while directives</h1>
+          <h1><a href="#each-while-directives">@each and @while directives</a></h1>
         </header>
 
         <hr>
@@ -352,7 +353,7 @@
 
       <section id="mixins">
         <header>
-          <h1>Mixins</h1>
+          <h1><a href="#mixins">Mixins</a></h1>
         </header>
 
         <hr>
@@ -375,6 +376,27 @@
     </main>
 
   </div>
+
+  <button id="btn-top" onclick="topFunction()"><i class="fa-solid fa-angle-up"></i></button>
+
+
+  <script>
+    var btnTop = document.getElementById("btn-top")
+
+    window.onscroll = () => {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        btnTop.style.display = "block"
+      } else {
+        btnTop.style.display = "none"
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction () {
+      document.body.scrollTop = 0
+      document.documentElement.scrollTop = 0
+    }
+  </script>
 
 </body>
 
