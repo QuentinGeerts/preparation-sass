@@ -1,1 +1,40 @@
-/* 01 Syntax - Exercice */
+/* 12 - @if @for directives - Exercice */
+
+
+/*
+ * Créer une palette de couleur qui peut avoir deux thèmes : clair et sombre.
+ * Chacun des deux thèmes a quatre couleurs représentées par leurs codes hexadécimaux :
+ *
+ * clair: #cccccc, #eaeaea, #f1f4f7, #fffaf7
+ * sombre: #2b2b2b, #f5f5f5, #e5e5e5, #ddb34e
+ *
+ * La palette doit être représentée par 4 éléments à l'intérieur du conteneur .palette (utilisez le code ci-dessous).
+ * Ces 4 éléments doivent être impérativement positionnés et affichés sur une seule ligne, à 1em de distance
+ * l'un de l'autre.
+ *
+ * Vous devez utiliser le moins de code Sass possible.
+ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 20px;
+}
+
+.palette {
+  position: relative;
+  width: 17em;
+  height: 5em;
+  border: 1px solid #333;
+}
+
+.palette-item {
+  width: 3em;
+  height: 3em;
+  display: inline-block;
+  position: absolute;
+  top: 1em;
+  left: 1em;
+}
