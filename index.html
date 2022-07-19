@@ -127,8 +127,7 @@
 				<span class="keyword-property">cursor</span>: default;
 				<span class="keyword-property">pointer-events</span>: none;
 		}
-}
-            </pre>
+}</pre>
 
 					</div>
 					<div>
@@ -151,8 +150,7 @@
 		&<span class="keyword-pseudo-class">:disabled</span>
 				<span class="keyword-property">color</span>: $mdc-button-disabled-ink-color
 				<span class="keyword-property">cursor</span>: default
-				<span class="keyword-property">pointer-events</span>: none
-            </pre>
+				<span class="keyword-property">pointer-events</span>: none</pre>
 					</div>
 				</div>
 
@@ -191,8 +189,7 @@ nav {
 		<span class="keyword-property">padding</span>: 6px 12px;
 		<span class="keyword-property">text-decoration</span>: none;
 	}
-}
-        </pre>
+}</pre>
 					</div>
 
 					<div>
@@ -205,8 +202,7 @@ a {
 		<span class="keyword-property">text-decoration</span>: underline wavy;
 	}
 
-}
-						</pre>
+}</pre>
 					</div>
 					<div>
 
@@ -229,8 +225,7 @@ a {
 	& .child {
 		<span class="keyword-property">margin</span>: .5em;
 	}
-}
-						</pre>
+}</pre>
 					</div>
 
 
@@ -252,8 +247,7 @@ a {
 
 <span class="keyword-pseudo-class">#demo</span> .child {
 	<span class="keyword-property">margin</span>: .5em;
-}
-						</pre>
+}</pre>
 					</div>
 
 				</div>
@@ -290,8 +284,7 @@ a {
 	}
 
 	&:<span class="keyword-pseudo-class">hover</span> { font-size: 36px; }
-}
-						</pre>
+}</pre>
 					</div>
 					<div>
 						<h2>Exemple SCSS</h2>
@@ -304,9 +297,7 @@ a {
 }
 .enlarge:<span class="keyword-pseudo-class">hover</span> {
 	<span class="keyword-property">font-size</span>: 36px;
-}
-
-						</pre>
+}</pre>
 					</div>
 					<div>
 						<h2>Ecriture raccourcie Scss</h2>
@@ -316,8 +307,7 @@ a {
 		bottom: 10px;
 		top: 2px;
 	}
-}
-						</pre>
+}</pre>
 					</div>
 					<div>
 						<h2>Ecriture raccourcie CSS</h2>
@@ -326,8 +316,7 @@ a {
 	<span class="keyword-property">margin</span>: auto;
 	<span class="keyword-property">margin-bottom</span>: 10px;
 	<span class="keyword-property">margin-top</span>: 2px;
-}							
-						</pre>
+}</pre>
 					</div>
 				</div>
 			</section>
@@ -360,8 +349,7 @@ $<span class="keyword-property">fontSize</span>: 20px;
 p{
 	<span class="keyword-property">color</span>:$<span class="keyword-property">txtcolor</span>;
 		<span class="keyword-property">font-size</span>:$<span class="keyword-property">fontSize</span>;
-}
-						</pre>
+}</pre>
 					</div>
 					<div>
 						<h2>CSS</h2>
@@ -369,8 +357,7 @@ p{
 p {
 	<span class="keyword-property">color</span>: #008000;
 	<span class="keyword-property">font-size</span>: 20px;
-}
-						</pre>
+}</pre>
 					</div>
 				</div>
 
@@ -405,8 +392,7 @@ p {
 	}
 }
 
-<span class="keyword-at">@include</span> corner-icon("mail", top, left);
-						</pre>
+<span class="keyword-at">@include</span> corner-icon("mail", top, left);</pre>
 					</div>
 					<div>
 						<h2>CSS</h2>
@@ -416,8 +402,7 @@ p {
 	<span class="keyword-property">position</span>: absolute;
 	<span class="keyword-property">top</span>: 0;
 	<span class="keyword-property">left</span>: 0;
-}							
-						</pre>
+}</pre>
 					</div>
 				</div>
 			</section>
@@ -429,19 +414,119 @@ p {
 
 				<hr>
 
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum vitae itaque inventore porro quod praesentium
-					dolores saepe alias officiis. Non quaerat rerum porro tempore nostrum earum ad odit vel fuga dolorem sint quod
-					laudantium ratione ut quo, maxime sit nulla? Voluptas deleniti ipsa nemo quibusdam ut mollitia debitis
-					suscipit quia sapiente, magnam minima error commodi quod veniam repellendus quo ea! Nesciunt deleniti sequi
-					vel, facilis debitis obcaecati illo, tenetur, sapiente voluptates molestiae similique ipsum? Veniam,
-					recusandae! Debitis ducimus quae illum adipisci minima! Totam sint commodi, ipsa numquam sapiente voluptatem
-					debitis iste, ipsam quo temporibus similique error repellat vel ea molestiae soluta! Aperiam obcaecati culpa
-					optio enim illum, consequatur at, facilis ratione delectus nobis aliquam natus quam eos reiciendis aut minima!
-					Praesentium, soluta tempora, corporis debitis nesciunt voluptas recusandae similique ipsam reprehenderit
-					voluptatum ad porro. Recusandae adipisci exercitationem, officiis perspiciatis delectus aperiam mollitia
-					facere accusantium expedita placeat iusto modi iste repellendus?
+				<p>Le type de données est le type d'une information qui nécessite de déclarer le type de données pour chaque
+					objet de données.</p>
+				<p>Il existe plusieurs types de données tels que : </p>
+
+				<h3>Numbers</h3>
+				<p>Les nombres en Sass ont deux composants : la valeur et l'unité (optionnel)</p>
+
+				<p>Exemple : <code>12</code> <code>100px</code> <code>5px * 2px</code> <code>5.2e3</code></p>
+
+				<p><i class="fa-solid fa-triangle-exclamation"></i> Lors des opérations, vous ne pouvez pas calculer 2 unités
+					différentes. Pour régler le soucis, vous pouvez donner une unité à la première valeur et omettre la suivante.
 				</p>
+
+
+				<h3>Strings</h3>
+				<p>Les chaines de caractères sont des séquences de caractères.</p>
+				<p>Sass supporte deux types de chaînes de caractères : les chaînes entre guillemets, comme "Helvetica Neue", et
+					les chaînes sans guillements (également appelées identificateurs)</p>
+
+				<p>Exemple : <code>".widget:hover"</code> <code>bold</code></p>
+
+				<p>Vous pouvez utiliser la fonction <code>string.unquote(".widget:hover"); // .widget:hover</code> ou la
+					fonction <code>string.quote(bold); // "bold" </code> pour récupérer une chaine de caractères entre guillemets
+					ou pas.</p>
+
+				<p>Pour échapper un caractère, vous pouvez utiliser le caractère d'échappement : <code>\</code></p>
+
+
+				<h3>Colors</h3>
+				<p>Sass intègre un support pour les valeurs des couleurs. Il est possible de créer des couleurs de plusieurs
+					façons : </p>
+
+				<pre>
+<span class="keyword-at">@debug</span> #f2ece4; <span class="keyword-comment">// #f2ece4</span>
+<span class="keyword-at">@debug</span> #b37399aa; <span class="keyword-comment">// rgba(179, 115, 153, 67%)</span>
+<span class="keyword-at">@debug</span> midnightblue; <span class="keyword-comment">// #191970</span>
+<span class="keyword-at">@debug</span> <span class="keyword-property">rgb</span>(204, 102, 153); <span class="keyword-comment">// #c69</span>
+<span class="keyword-at">@debug</span> <span class="keyword-property">rgba</span>(107, 113, 127, 0.8); <span class="keyword-comment">// rgba(107, 113, 127, 0.8)</span>
+<span class="keyword-at">@debug</span> <span class="keyword-property">hsl</span>(228, 7%, 86%); <span class="keyword-comment">// #dadbdf</span>
+<span class="keyword-at">@debug</span> <span class="keyword-property">hsla</span>(20, 20%, 85%, 0.7); <span class="keyword-comment">// rgb(225, 215, 210, 0.7)</span>
+</pre>
+
+
+				<h3>Lists</h3>
+				<p>Les listes continennent une séquence d'autres valeurs. Dans Sass, les éléments des listes peuvent être
+					séparés par des virgules (Helvetica, Arial, sans-serif), des espaces (10px 15px 0 0) ou des barres obliques
+					tant qu'ils sont cohérents dans la liste.</p>
+
+				<p>Contrairement aux autres langages, les listes dans Sass ne nécessitent pas de crochets spéciaux ; toutes les
+					expressions séparées par des espaces ou des virgules comptent comme une liste.</p>
+
+				<p>Exemple : <code>margin: 10px auto 15px;</code> <code>font-family: Arial, Helvetica, sans-serif;</code></p>
+
+
+				<h3>Maps</h3>
+				<p>Les maps sont des listes qui contiennent des paires de clefs et de valeurs. Pour récupérer une valeur, il
+					faudra entrer la clef associée. Dans le même principe qu'un dictionnaire avec des mots et leur définition.</p>
+				<p>Les maps sont stockées dans une variable et construites entre parenthèse. Chaque paires est construite en
+					stipulant <code>expression: valeur</code> et séparées par une virgule.</p>
+				<p>Comme chaque valeur est définie par une clef, celle-ci doit être unique au sein de la map. Il ne peut donc
+					pas avoir deux clefs identiques.</p>
+
+				<p>Exemple : <code>$font-weights: ("regular": 400, "medium": 500, "bold": 700);</code>
+					<code>$colors: (1: #89C3AB, 2: #636363);</code>
+				</p>
+
+				<p>Pour récupérer un élément de la liste, il vous faudra utiliser la méthode
+					<code>map-get($variable, clef)</code>
+				</p>
+
+				<h3>Booleans</h3>
+				<p>Les bolléens sont des valeurs logiques vrai et faux. En plus de leurs formes littérales, les booléens sont
+					renvoyés par des opérateurs d'égalité et relationnels, ainsi que par de nombreuses fonctions intégrées telles
+					que <code>math.comparable()</code> ou <code>map.has-key()</code></p>
+
+				<div class="content-compare">
+					<div>
+						<h2>Scss</h2>
+						<pre>
+<span class="keyword-at">@mixin</span> <span class="keyword-property">avatar</span>($size, $circle: false) {
+	<span class="keyword-property">width</span>: $size;
+	<span class="keyword-property">height</span>: $size;
+
+	<span class="keyword-at">@if</span> $circle {
+		<span class="keyword-property">border-radius</span>: $size / 2;
+	}
+}
+
+.square-av {
+	<span class="keyword-at">@include</span> avatar(100px, $circle: false);
+}
+.circle-av {
+	<span class="keyword-at">@include</span> avatar(100px, $circle: true);
+}
+						</pre>
+					</div>
+					<div>
+						<h2>CSS</h2>
+						<pre>
+.square-av {
+	<span class="keyword-property">width</span>: 100px;
+	<span class="keyword-property">height</span>: 100px;
+}
+
+.circle-av {
+	<span class="keyword-property">width</span>: 100px;
+	<span class="keyword-property">height</span>: 100px;
+	<span class="keyword-property">border-radius</span>: 50px;
+}
+						</pre>
+					</div>
+				</div>
+
 			</section>
 
 			<section id="operations">
