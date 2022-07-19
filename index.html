@@ -743,7 +743,87 @@ pre, code {
 
 				<hr>
 
-				<p></p>
+				<p>L'avantage d'utiliser les @media avec Sass est que vous n'avez pas besoin de réécrire le.s chemin.s si vous
+					les modifier</p>
+				<p>Vous pourrez ainsi imbriquer les @media dans votre structure scss.</p>
+
+				<div class="content-compare">
+					<div>
+						<h1>Scss</h1>
+						<pre>
+nav {
+
+	ul {
+		<span class="keyword-property">list-style</span>: none;
+
+		li {
+			<span class="keyword-property">float</span>: left;
+
+			a {
+				<span class="keyword-property">display</span>: inline-block;
+
+			}
+
+			&<span class="keyword-pseudo-class">:after</span> {
+				<span class="keyword-property">content</span>: " - ";
+				<span class="keyword-property">border</span>: 1px dotted #ccc;
+				<span class="keyword-property">width</span>: 1px;
+				<span class="keyword-property">height</span>: 100%;
+			}
+
+			<span class="keyword-at">@media</span> screen and (max-width: 768px) {
+				<span class="keyword-property">float</span>: none;
+
+				a {
+					<span class="keyword-property">display</span>: block;
+				}
+
+				<span class="keyword-at">@media</span> (orientation: portrait) {
+					<span class="keyword-property">border-bottom</span>: 1px;
+				}
+
+			}
+
+		}
+	}
+
+}
+						</pre>
+					</div>
+					<div>
+						<h1>CSS</h1>
+						<pre>
+nav ul {
+	<span class="keyword-property">list-style</span>: none;
+}
+nav ul li {
+	<span class="keyword-property">float</span>: left;
+}
+nav ul li a {
+	<span class="keyword-property">display</span>: inline-block;
+}
+nav ul li:<span class="keyword-pseudo-class">after</span> {
+	<span class="keyword-property">content</span>: " - ";
+	<span class="keyword-property">border</span>: 1px dotted #ccc;
+	<span class="keyword-property">width</span>: 1px;
+	<span class="keyword-property">height</span>: 100%;
+}
+<span class="keyword-at">@media</span> screen and (<span class="keyword-property">max-width</span>: 768px) {
+	nav ul li {
+		<span class="keyword-property">float</span>: none;
+	}
+	nav ul li a {
+		<span class="keyword-property">display</span>: block;
+	}
+}
+<span class="keyword-at">@media</span> screen and (<span class="keyword-property">max-width</span>: 768px) and (orientation: portrait) {
+	nav ul li {
+		<span class="keyword-property">border-bottom</span>: 1px;
+	}
+}
+						</pre>
+					</div>
+				</div>
 			</section>
 
 			<section id="extend-directive">
@@ -753,19 +833,7 @@ pre, code {
 
 				<hr>
 
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum vitae itaque inventore porro quod praesentium
-					dolores saepe alias officiis. Non quaerat rerum porro tempore nostrum earum ad odit vel fuga dolorem sint quod
-					laudantium ratione ut quo, maxime sit nulla? Voluptas deleniti ipsa nemo quibusdam ut mollitia debitis
-					suscipit quia sapiente, magnam minima error commodi quod veniam repellendus quo ea! Nesciunt deleniti sequi
-					vel, facilis debitis obcaecati illo, tenetur, sapiente voluptates molestiae similique ipsum? Veniam,
-					recusandae! Debitis ducimus quae illum adipisci minima! Totam sint commodi, ipsa numquam sapiente voluptatem
-					debitis iste, ipsam quo temporibus similique error repellat vel ea molestiae soluta! Aperiam obcaecati culpa
-					optio enim illum, consequatur at, facilis ratione delectus nobis aliquam natus quam eos reiciendis aut minima!
-					Praesentium, soluta tempora, corporis debitis nesciunt voluptas recusandae similique ipsam reprehenderit
-					voluptatum ad porro. Recusandae adipisci exercitationem, officiis perspiciatis delectus aperiam mollitia
-					facere accusantium expedita placeat iusto modi iste repellendus?
-				</p>
+				<p></p>
 			</section>
 
 			<section id="if-for-directives">
@@ -775,19 +843,7 @@ pre, code {
 
 				<hr>
 
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum vitae itaque inventore porro quod praesentium
-					dolores saepe alias officiis. Non quaerat rerum porro tempore nostrum earum ad odit vel fuga dolorem sint quod
-					laudantium ratione ut quo, maxime sit nulla? Voluptas deleniti ipsa nemo quibusdam ut mollitia debitis
-					suscipit quia sapiente, magnam minima error commodi quod veniam repellendus quo ea! Nesciunt deleniti sequi
-					vel, facilis debitis obcaecati illo, tenetur, sapiente voluptates molestiae similique ipsum? Veniam,
-					recusandae! Debitis ducimus quae illum adipisci minima! Totam sint commodi, ipsa numquam sapiente voluptatem
-					debitis iste, ipsam quo temporibus similique error repellat vel ea molestiae soluta! Aperiam obcaecati culpa
-					optio enim illum, consequatur at, facilis ratione delectus nobis aliquam natus quam eos reiciendis aut minima!
-					Praesentium, soluta tempora, corporis debitis nesciunt voluptas recusandae similique ipsam reprehenderit
-					voluptatum ad porro. Recusandae adipisci exercitationem, officiis perspiciatis delectus aperiam mollitia
-					facere accusantium expedita placeat iusto modi iste repellendus?
-				</p>
+				<p></p>
 			</section>
 
 			<section id="each-while-directives">
@@ -797,19 +853,7 @@ pre, code {
 
 				<hr>
 
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum vitae itaque inventore porro quod praesentium
-					dolores saepe alias officiis. Non quaerat rerum porro tempore nostrum earum ad odit vel fuga dolorem sint quod
-					laudantium ratione ut quo, maxime sit nulla? Voluptas deleniti ipsa nemo quibusdam ut mollitia debitis
-					suscipit quia sapiente, magnam minima error commodi quod veniam repellendus quo ea! Nesciunt deleniti sequi
-					vel, facilis debitis obcaecati illo, tenetur, sapiente voluptates molestiae similique ipsum? Veniam,
-					recusandae! Debitis ducimus quae illum adipisci minima! Totam sint commodi, ipsa numquam sapiente voluptatem
-					debitis iste, ipsam quo temporibus similique error repellat vel ea molestiae soluta! Aperiam obcaecati culpa
-					optio enim illum, consequatur at, facilis ratione delectus nobis aliquam natus quam eos reiciendis aut minima!
-					Praesentium, soluta tempora, corporis debitis nesciunt voluptas recusandae similique ipsam reprehenderit
-					voluptatum ad porro. Recusandae adipisci exercitationem, officiis perspiciatis delectus aperiam mollitia
-					facere accusantium expedita placeat iusto modi iste repellendus?
-				</p>
+				<p></p>
 			</section>
 
 			<section id="mixins">
@@ -819,19 +863,7 @@ pre, code {
 
 				<hr>
 
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum vitae itaque inventore porro quod praesentium
-					dolores saepe alias officiis. Non quaerat rerum porro tempore nostrum earum ad odit vel fuga dolorem sint quod
-					laudantium ratione ut quo, maxime sit nulla? Voluptas deleniti ipsa nemo quibusdam ut mollitia debitis
-					suscipit quia sapiente, magnam minima error commodi quod veniam repellendus quo ea! Nesciunt deleniti sequi
-					vel, facilis debitis obcaecati illo, tenetur, sapiente voluptates molestiae similique ipsum? Veniam,
-					recusandae! Debitis ducimus quae illum adipisci minima! Totam sint commodi, ipsa numquam sapiente voluptatem
-					debitis iste, ipsam quo temporibus similique error repellat vel ea molestiae soluta! Aperiam obcaecati culpa
-					optio enim illum, consequatur at, facilis ratione delectus nobis aliquam natus quam eos reiciendis aut minima!
-					Praesentium, soluta tempora, corporis debitis nesciunt voluptas recusandae similique ipsam reprehenderit
-					voluptatum ad porro. Recusandae adipisci exercitationem, officiis perspiciatis delectus aperiam mollitia
-					facere accusantium expedita placeat iusto modi iste repellendus?
-				</p>
+				<p></p>
 			</section>
 
 		</main>

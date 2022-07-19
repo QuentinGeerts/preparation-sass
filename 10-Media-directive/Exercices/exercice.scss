@@ -1,1 +1,70 @@
-/* 01 Syntax - Exercice */
+/* 10 @media directive - Exercice */
+
+/*
+ * Vous devez créer le fichier scss qui correspond à ces règles css.
+ * 1. Utilisation de variables 
+ * 2. Utilisation d'au moins 2 maps
+ * 3. Imbrication des règles des @media au moins une fois
+ * 4. Vous devez utiliser l'opérateur * (multiplication) au moins 2 fois
+ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font: 1em/1.5 "Helvetica", Arial, sans-serif;
+}
+
+body.boxed-layout {
+  background-color: #eaeaea;
+}
+
+@media all and (max-width: 480px) {
+  body {
+    font-size: 1.4em;
+    background-color: #fff;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1280px) {
+  body {
+    font-size: 1.2em;
+  }
+}
+
+p {
+  margin-bottom: 1.5em;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+@media all and (min-width: 768px) {
+  .boxed-layout .container {
+    background-color: #fff;
+    border: 1px solid #d1d1d1;
+    border-width: 0 1px;
+    padding: 3em;
+  }
+}
+
+.col-half {
+  float: left;
+  width: 45%;
+  margin: 0 2.5%;
+  padding: 3em;
+}
+
+@media all and (max-width: 480px) {
+  .col-half {
+    float: none;
+    width: 100%;
+    margin: 0;
+  }
+}

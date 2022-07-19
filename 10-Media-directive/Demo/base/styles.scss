@@ -13,8 +13,6 @@ $base-font-size: 1.125em;
 
 $link-after: " ♥";
 
-$tablet-breakpoint: "screen and (max-width: 768px)";
-
 /* General Styles */
 * {
   box-sizing: border-box;
@@ -148,24 +146,6 @@ nav {
         border: 1px dotted #ccc;
         width: 1px;
         height: 100%;
-      }
-
-      // @media screen and (max-width: 768px) {
-      @media #{$tablet-breakpoint} {
-        float: none;
-
-        a {
-          display: block;
-        }
-
-        &::after {
-          border: none;
-        }
-
-        @media (orientation: portrait) {
-          border-bottom: 1px;
-        }
-
       }
 
     }
