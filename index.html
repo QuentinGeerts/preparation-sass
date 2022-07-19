@@ -40,8 +40,10 @@
 				<li><a href="#partials">09 - Partials <i class="fa-solid fa-xmark text-danger"></i></a></li>
 				<li><a href="#media-directive">10 - @media directive <i class="fa-solid fa-xmark text-danger"></i></a></li>
 				<li><a href="#extend-directive">11 - @extend directive <i class="fa-solid fa-xmark text-danger"></i></a></li>
-				<li><a href="#if-for-directives">12 - @if and @for directives <i class="fa-solid fa-xmark text-danger"></i></a></li>
-				<li><a href="#each-while-directives">13 - @each and @while directives <i class="fa-solid fa-xmark text-danger"></i></a></li>
+				<li><a href="#if-for-directives">12 - @if and @for directives <i class="fa-solid fa-xmark text-danger"></i></a>
+				</li>
+				<li><a href="#each-while-directives">13 - @each and @while directives <i
+							class="fa-solid fa-xmark text-danger"></i></a></li>
 				<li><a href="#mixins">14 - Mixins <i class="fa-solid fa-xmark text-danger"></i></a></li>
 			</ul>
 		</nav>
@@ -445,8 +447,9 @@ p {
 				<h3>Colors</h3>
 				<p>Sass intègre un support pour les valeurs des couleurs. Il est possible de créer des couleurs de plusieurs
 					façons : </p>
-
-				<pre>
+				<div class="content-compare">
+					<div>
+						<pre>
 <span class="keyword-at">@debug</span> #f2ece4; <span class="keyword-comment">// #f2ece4</span>
 <span class="keyword-at">@debug</span> #b37399aa; <span class="keyword-comment">// rgba(179, 115, 153, 67%)</span>
 <span class="keyword-at">@debug</span> midnightblue; <span class="keyword-comment">// #191970</span>
@@ -455,7 +458,8 @@ p {
 <span class="keyword-at">@debug</span> <span class="keyword-property">hsl</span>(228, 7%, 86%); <span class="keyword-comment">// #dadbdf</span>
 <span class="keyword-at">@debug</span> <span class="keyword-property">hsla</span>(20, 20%, 85%, 0.7); <span class="keyword-comment">// rgb(225, 215, 210, 0.7)</span>
 </pre>
-
+					</div>
+				</div>
 
 				<h3>Lists</h3>
 				<p>Les listes continennent une séquence d'autres valeurs. Dans Sass, les éléments des listes peuvent être
@@ -540,10 +544,12 @@ p {
 
 				<h3>Opérateurs arithmétique : <code>+</code> <code>-</code> <code>*</code> <code>/</code></h3>
 
-				<p>Les opérateurs mathématiques sont utilisés par réaliser des opérations classiques entre les nombres, seulement pour les nombres avec la même unité (px => px, vh => vh, etc...)</p>
+				<p>Les opérateurs mathématiques sont utilisés par réaliser des opérations classiques entre les nombres,
+					seulement pour les nombres avec la même unité (px => px, vh => vh, etc...)</p>
 
 				<p>Les deux membres de part et d'autre du signe sont calculés sur base de l'unité à gauche du signe.</p>
-				<p>Attention lors d'une multiplication, l'unité y est également multiplié, il faut donc l'omettre pour la partie de droite.</p>
+				<p>Attention lors d'une multiplication, l'unité y est également multiplié, il faut donc l'omettre pour la partie
+					de droite.</p>
 				<code>12px + 12px // 24px</code>
 				<code>1in - 10px; // 0.8958333333in</code>
 				<code>12px * 2px // 24px*px</code>
@@ -553,13 +559,17 @@ p {
 
 				<h3>Opérateurs d'égalité : <code>==</code> <code>!=</code></h3>
 
-				<p>Les opérateurs d'égalité permettent de vérifier l'égalité entre le membre de gauche et celui de droite du signe.</p>
-				<p><code>==</code> vérifie si les deux valeurs sont les mêmes. Dans le cas où ils sont les mêmes, la valeur <code>true</code> est renvoyée, dans le cas contraire <code>false</code>.</p>
+				<p>Les opérateurs d'égalité permettent de vérifier l'égalité entre le membre de gauche et celui de droite du
+					signe.</p>
+				<p><code>==</code> vérifie si les deux valeurs sont les mêmes. Dans le cas où ils sont les mêmes, la valeur
+					<code>true</code> est renvoyée, dans le cas contraire <code>false</code>.
+				</p>
 				<p><code>!=</code> fait l'inverse du <code>==</code>.</p>
 
 				<h3>Opérateurs relationnels : <code><</code> <code>></code> <code><=</code> <code>>=</code></h3>
 
-				<p>L'opérateur relationnels déterminent si les nombres sont plus grands ou plus petits les uns que les autres. Ils convertissent automatiquement entre les unités compatibles.</p>
+				<p>L'opérateur relationnels déterminent si les nombres sont plus grands ou plus petits les uns que les autres.
+					Ils convertissent automatiquement entre les unités compatibles.</p>
 
 				<p><code>></code> retourne si le premier élément est supérieur par rapport au second.</p>
 				<p><code><</code> retourne si le premier élément est inférieur par rapport au second.</p>
@@ -570,16 +580,20 @@ p {
 
 				<p>La concaténation permet de coller deux valeurs ensemble. (cfr. Interpolation).</p>
 
-				<p><code>+</code> retourne une chaine de caractères contenant les deux expressions. Si l'expression de gauche est entre guillemet, le résultat le sera également. Sans guillemet dans le cas contraire.</p>
+				<p><code>+</code> retourne une chaine de caractères contenant les deux expressions. Si l'expression de gauche
+					est entre guillemet, le résultat le sera également. Sans guillemet dans le cas contraire.</p>
 
-				<p><code>-</code> retourne une chaine de caractères sans guillemet contenant les deux expressions séparées par -.</p>
+				<p><code>-</code> retourne une chaine de caractères sans guillemet contenant les deux expressions séparées par
+					-.</p>
 				<p>Il s'agit d'un ancien opérateur, utilisez l'interpolation à la place.</p>
 
 				<h3>Opérateurs booléens : <code>not</code> <code>and</code> <code>or</code></h3>
 
-				<p>Contrairement aux autres langages, Sass utilise des mots plutôt que des symbales pour les opérateurs booléens.</p>
+				<p>Contrairement aux autres langages, Sass utilise des mots plutôt que des symbales pour les opérateurs
+					booléens.</p>
 
-				<p><code>not</code> retourne la valeur opposée de l'expression. Elle transforme vrai en faux et faux en vrai.</p>
+				<p><code>not</code> retourne la valeur opposée de l'expression. Elle transforme vrai en faux et faux en vrai.
+				</p>
 				<p><code>and</code> retourne vrai si la valeur des deux expressions est à vrai. Sinon faux.</p>
 				<p><code>or</code> retourne vrai si l'une des valeurs des deux expression est à vrai. Sinon faux.</p>
 

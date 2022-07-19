@@ -1,0 +1,209 @@
+/* 08 - @import directive */
+
+// Variables
+$text-color: #333;
+$text-font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans';
+
+$white: #ffffff;
+
+$baseline: 1.5em;
+
+$line-height: 1.5;
+$base-font-size: 1.125em;
+
+$link-after: " ♥";
+
+/* General Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  color: $text-color;
+
+  // font: 400 1.125em/1.5 $text-font-family;
+  // font: 400 $base-font-size/$line-height $text-font-family; // Ne fonctionne pas comme voulu
+  font: 400 #{$base-font-size}/#{$line-height} $text-font-family;
+
+  &.boxed-layout {
+    background-color: #666;
+  }
+}
+
+p {
+  margin-bottom: 1.3em;
+  color: #666;
+
+  a {
+    color: yellowgreen;
+  }
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline wavy;
+  }
+
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 1.414em 0 .5em;
+  font-weight: inherit;
+  line-height: 1.2;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.157em;
+}
+
+h2 {
+  font-size: 2.369em;
+}
+
+h3 {
+  font-size: 1.777em;
+}
+
+h4 {
+  font-size: 1.333em;
+}
+
+small {
+  font-size: .75em;
+}
+
+/* Layout specific */
+.container {
+  width: 90%;
+  margin: 0 auto;
+
+  .boxed-layout & {
+
+    // Pour passer la variable en global, vous pouvez ajouter un !global à la fin
+    $border-color: #afafaf;
+
+    background-color: $white;
+    padding: 3em;
+
+    border {
+      width: 0 1px;
+      style: solid;
+      color: $border-color;
+    }
+
+  }
+
+  >header {
+    h1 {
+      // border-color: $boder-color; // Ne fonctionnera pas car la variable est locale
+      font-size: 4em;
+      font-weight: 800;
+    }
+  }
+
+}
+
+nav {
+  padding: {
+    top: 3em;
+    right: 0;
+    left: 0;
+    bottom: 3em;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    overflow: hidden;
+
+    li {
+      float: left;
+
+      a {
+        display: inline-block;
+
+        color: $text-color;
+        padding: 1em;
+
+        &:hover {
+          text-decoration: none;
+          background-color: #afafaf;
+        }
+
+      }
+
+      &:after {
+        content: " - #{$link-after}";
+        border: 1px dotted #ccc;
+        width: 1px;
+        height: 100%;
+      }
+
+    }
+  }
+
+}
+
+#demo {
+  &-child {
+    margin: .5em;
+  }
+
+  &child {
+    margin: .5em;
+  }
+
+  &.child {
+    margin: .5em;
+  }
+
+  & .child {
+    margin: .5em;
+  }
+}
+
+$child: "widget";
+
+.sidebar-#{$child} {
+  padding: $baseline;
+}
+
+/* 01 - Syntax Scss */
+
+/*
+ * Ce commentaire sera affiché dans le CSS 
+ * parce qu'il respecte la syntaxe CSS
+ */
+
+$bg-color: #ffffff;
+$text-color: #333;
+$baseline: 1.5em;
+
+body {
+  background-color: $bg-color;
+  color: $text-color;
+
+  p {
+    color: lighten($color: $text-color, $amount: 10%)
+  }
+
+}
+
+.container {
+  margin: $baseline * 2;
+  padding: calc($baseline / 2);
+}
+
+#sidebar ol li,
+footer {
+  padding: $baseline;
+}

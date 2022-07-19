@@ -1,0 +1,95 @@
+/* Layout specific */
+.container {
+  width: 90%;
+  margin: 0 auto;
+
+  .boxed-layout & {
+
+    // Pour passer la variable en global, vous pouvez ajouter un !global à la fin
+    $border-color: #afafaf;
+
+    background-color: $white;
+    padding: 3em;
+
+    border {
+      width: 0 1px;
+      style: solid;
+      color: $border-color;
+    }
+
+  }
+
+  >header {
+    h1 {
+      // border-color: $boder-color; // Ne fonctionnera pas car la variable est locale
+      font-size: 4em;
+      font-weight: 800;
+    }
+  }
+
+}
+
+nav {
+  padding: {
+    top: 3em;
+    right: 0;
+    left: 0;
+    bottom: 3em;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    overflow: hidden;
+
+    li {
+      float: left;
+
+      a {
+        display: inline-block;
+
+        color: $text-color;
+        padding: 1em;
+
+        &:hover {
+          text-decoration: none;
+          background-color: #afafaf;
+        }
+
+      }
+
+      &:after {
+        content: " - #{$link-after}";
+        border: 1px dotted #ccc;
+        width: 1px;
+        height: 100%;
+      }
+
+    }
+  }
+
+}
+
+#demo {
+  &-child {
+    margin: .5em;
+  }
+
+  &child {
+    margin: .5em;
+  }
+
+  &.child {
+    margin: .5em;
+  }
+
+  & .child {
+    margin: .5em;
+  }
+}
+
+$child: "widget";
+
+.sidebar-#{$child} {
+  padding: $baseline;
+}

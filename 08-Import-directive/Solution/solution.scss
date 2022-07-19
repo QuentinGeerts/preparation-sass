@@ -9,7 +9,7 @@
 @import "typography.scss";
 @import "typography";
 
-/*** Réponse : ***/
+/*** Réponse : Vrai ***/
 
 
 
@@ -17,15 +17,15 @@
 /*** Est-ce que le l'import suivant est correct ? Oui ou non ? ***/
 @import "typography" screen;
 
-/*** Réponse : ***/
+/*** Réponse : Oui ***/
 
 
 
 /*** Question 3 ***/
-/*** Est-ce que le les imports suivants sont corrects ? Vrai ou Faux ? ***/
+/*** Est-ce que le les imports suivants sont corrects ? Oui ou non ? ***/
 @import "reset.sass", "settings/variables";
 
-/*** Réponse : ***/
+/*** Réponse : Oui ***/
 
 
 
@@ -33,7 +33,7 @@
 /*** L'instruction contiendra le contenu de "reset.scss". Vrai ou Faux ? ***/
 @import url("reset.scss");
 
-/*** Réponse : ***/
+/*** Réponse : Faux ***/
 
 
 
@@ -42,6 +42,6 @@
 @import "reset.scss";
 @import "typography";
 
-/*** Réponse : ***/
+/*** Réponse : Faux ***/
 
 
