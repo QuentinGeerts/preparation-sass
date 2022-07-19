@@ -9,7 +9,7 @@
 @import "reset";
 @import "_reset.scss";
 
-/*** Réponse : ***/
+/*** Réponse : Vrai ***/
 
 
 
@@ -17,7 +17,7 @@
 /*** L'import suivant est correct ? Oui ou non ? ***/
 @import "_typography.sass" ;
 
-/*** Réponse : ***/
+/*** Réponse : Vrai ***/
 
 
 
@@ -25,7 +25,7 @@
 /*** Est-ce que l'import suivant est correct ? Vrai ou Faux ? ***/
 @import url("_typography.scss");
 
-/*** Réponse : ***/
+/*** Réponse : Non ***/
 
 
 
@@ -33,7 +33,7 @@
 /*** L'instruction importera les deux fichiers partiels. Vrai ou Faux ? ***/
 @import "variables", "utilities/settings";
 
-/*** Réponse : ***/
+/*** Réponse : Vrai ***/
 
 
 
@@ -42,6 +42,6 @@
 @import "_reset.scss";
 @import "reset.scss";
 
-/*** Réponse : ***/
+/*** Réponse : Faux ***/
 
 

@@ -37,7 +37,7 @@
 				<li><a href="#data-types">06 - Data Types <i class="fa-solid fa-check text-success"></i></a></li>
 				<li><a href="#operations">07 - Operations <i class="fa-solid fa-check text-success"></i></a></li>
 				<li><a href="#import-directive">08 - @import directive <i class="fa-solid fa-check text-success"></i></a></li>
-				<li><a href="#partials">09 - Partials <i class="fa-solid fa-xmark text-danger"></i></a></li>
+				<li><a href="#partials">09 - Partials <i class="fa-solid fa-check text-success"></i></a></li>
 				<li><a href="#media-directive">10 - @media directive <i class="fa-solid fa-xmark text-danger"></i></a></li>
 				<li><a href="#extend-directive">11 - @extend directive <i class="fa-solid fa-xmark text-danger"></i></a></li>
 				<li><a href="#if-for-directives">12 - @if and @for directives <i class="fa-solid fa-xmark text-danger"></i></a>
@@ -621,23 +621,23 @@ p {
 						<h2>SCSS</h2>
 						<div>
 							<pre>
-// foundation/_code.scss
+<span class="keyword-comment">// foundation/_code.scss</span>
 code {
-	padding: .25em;
-	line-height: 0;
+	<span class="keyword-property">padding</span>: .25em;
+	<span class="keyword-property">line-height</span>: 0;
 }
 							</pre>
 						</div>
 						<div>
 							<pre>
-// foundation/_lists.scss
+<span class="keyword-comment">// foundation/_lists.scss</span>
 ul, ol {
-  text-align: left;
+  <span class="keyword-property">text-align</span>: left;
 
   & & {
-    padding: {
-      bottom: 0;
-      left: 0;
+    <span class="keyword-property">padding</span>: {
+      <span class="keyword-property">bottom</span>: 0;
+      <span class="keyword-property">left</span>: 0;
     }
   }
 }
@@ -645,8 +645,8 @@ ul, ol {
 						</div>
 						<div>
 							<pre>
-// style.scss
-@import 'foundation/code', 'foundation/lists';
+<span class="keyword-comment">// style.scss</span>
+<span class="keyword-at">@import</span> 'foundation/code', 'foundation/lists';
 							</pre>
 						</div>
 
@@ -655,16 +655,16 @@ ul, ol {
 						<h2>CSS</h2>
 						<pre>
 code {
-	padding: .25em;
-	line-height: 0;
+	<span class="keyword-property">padding</span>: .25em;
+	<span class="keyword-property">line-height</span>: 0;
 }
 
 ul, ol {
-	text-align: left;
+	<span class="keyword-property">text-align</span>: left;
 }
 ul ul, ol ol {
-	padding-bottom: 0;
-	padding-left: 0;
+	<span class="keyword-property">padding-bottom</span>: 0;
+	<span class="keyword-property">padding-left</span>: 0;
 }							
 						</pre>
 					</div>
@@ -679,7 +679,8 @@ ul ul, ol ol {
 					importer
 				</p>
 
-				<p>Exemple : <code>@import "variables"</code> va automatiquement charger variables.scss, variables.sass, ou variables.css</p>
+				<p>Exemple : <code>@import "variables"</code> va automatiquement charger variables.scss, variables.sass, ou
+					variables.css</p>
 
 
 			</section>
@@ -691,19 +692,48 @@ ul ul, ol ol {
 
 				<hr>
 
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum vitae itaque inventore porro quod praesentium
-					dolores saepe alias officiis. Non quaerat rerum porro tempore nostrum earum ad odit vel fuga dolorem sint quod
-					laudantium ratione ut quo, maxime sit nulla? Voluptas deleniti ipsa nemo quibusdam ut mollitia debitis
-					suscipit quia sapiente, magnam minima error commodi quod veniam repellendus quo ea! Nesciunt deleniti sequi
-					vel, facilis debitis obcaecati illo, tenetur, sapiente voluptates molestiae similique ipsum? Veniam,
-					recusandae! Debitis ducimus quae illum adipisci minima! Totam sint commodi, ipsa numquam sapiente voluptatem
-					debitis iste, ipsam quo temporibus similique error repellat vel ea molestiae soluta! Aperiam obcaecati culpa
-					optio enim illum, consequatur at, facilis ratione delectus nobis aliquam natus quam eos reiciendis aut minima!
-					Praesentium, soluta tempora, corporis debitis nesciunt voluptas recusandae similique ipsam reprehenderit
-					voluptatum ad porro. Recusandae adipisci exercitationem, officiis perspiciatis delectus aperiam mollitia
-					facere accusantium expedita placeat iusto modi iste repellendus?
-				</p>
+				<p>Les fichiers partiels sont des fichiers destinés à être importés uniquement. Pour indiquer au compilateur que
+					ce sont des fichiers partiels, nous indiqueront un "_" devant les noms des fichiers.</p>
+
+				<p>Exemple : <code>_variables.scss</code></p>
+
+				<p>Lorsque le compilateur compile tous les fichiers, les fichiers partiels sont ignorés et ne sont qu'importés
+					dans les fichiers avec un @import à l'intérieur.</p>
+
+				<p>Pour voir un exemple, rendez-vous dans l'exemple du précédent chapitre. (cfr. <a
+						href="#import-directive">@import directive</a>)</p>
+
+				<p>Une utilisation intéressante avec les imports est le nesting.</p>
+				<p>Vous pouvez importer un fichier CSS pour un sélecteur particulier :</p>
+
+				<div class="content-compare">
+					<div>
+						<h2>SCSS</h2>
+						<pre>
+<span class="keyword-comment">// _theme.scss</span>
+pre, code {
+	<span class="keyword-property">font-family</span>: 'Source Code Pro', Helvetica, Arial;
+	<span class="keyword-property">border-radius</span>: 4px;
+}
+						</pre>
+						<pre>
+<span class="keyword-comment">// style.scss</span>
+.theme-sample {
+	<span class="keyword-at">@import</span> "theme";
+}
+						</pre>
+					</div>
+					<div>
+						<h2>CSS</h2>
+						<pre>
+.theme-sample pre, .theme-sample code {
+	<span class="keyword-property">font-family</span>: 'Source Code Pro', Helvetica, Arial;
+	<span class="keyword-property">border-radius</span>: 4px;
+}
+						</pre>
+					</div>
+				</div>
+
 			</section>
 
 			<section id="media-directive">
@@ -713,19 +743,7 @@ ul ul, ol ol {
 
 				<hr>
 
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum vitae itaque inventore porro quod praesentium
-					dolores saepe alias officiis. Non quaerat rerum porro tempore nostrum earum ad odit vel fuga dolorem sint quod
-					laudantium ratione ut quo, maxime sit nulla? Voluptas deleniti ipsa nemo quibusdam ut mollitia debitis
-					suscipit quia sapiente, magnam minima error commodi quod veniam repellendus quo ea! Nesciunt deleniti sequi
-					vel, facilis debitis obcaecati illo, tenetur, sapiente voluptates molestiae similique ipsum? Veniam,
-					recusandae! Debitis ducimus quae illum adipisci minima! Totam sint commodi, ipsa numquam sapiente voluptatem
-					debitis iste, ipsam quo temporibus similique error repellat vel ea molestiae soluta! Aperiam obcaecati culpa
-					optio enim illum, consequatur at, facilis ratione delectus nobis aliquam natus quam eos reiciendis aut minima!
-					Praesentium, soluta tempora, corporis debitis nesciunt voluptas recusandae similique ipsam reprehenderit
-					voluptatum ad porro. Recusandae adipisci exercitationem, officiis perspiciatis delectus aperiam mollitia
-					facere accusantium expedita placeat iusto modi iste repellendus?
-				</p>
+				<p></p>
 			</section>
 
 			<section id="extend-directive">

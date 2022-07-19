@@ -10,7 +10,4 @@ $base-font-size: 1.125em;
 
 $link-after: " ♥";
 
-// On peut laisser ainsi car il va reconnaitre les fichiers.
-// Les fichiers partials ne seront plus compilé mais juste importé
-// Attention, que d'autres fichiers non partials ne peuvent pas avoir le même nom que des fichiers partials
 @import "general/general", "layout";
