@@ -2,9 +2,12 @@
 
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  font-weight: normal;
+  font: {
+    family: Arial, Helvetica, sans-serif;
+    size: 16px;
+    weight: normal;
+  }
+
   line-height: 1.45;
 }
 
@@ -23,18 +26,22 @@ p {
 }
 
 blockquote {
-  font-family: serif;
-  font-size: 150%;
-  font-style: italic;
+  font: {
+    family: serif;
+    size: 150%;
+    style: italic;
+  }
 
   cite {
     a {
       color: #333;
 
       &:hover {
-        text-decoration: underline;
+        text: {
+          decoration: underline;
+          transform: uppercase;
+        }
         color: #3bb5a5;
-        text-transform: uppercase;
       }
 
       &::before {
