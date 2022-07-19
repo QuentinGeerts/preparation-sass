@@ -1,29 +1,48 @@
-/* 01 - Syntax Scss */
+/* 11 - @extends directive */
 
-/*
- * Ce commentaire sera affiché dans le CSS 
- * parce qu'il respecte la syntaxe CSS
- */
+.btn {
+  display: inline-block;
+  padding: 1em;
+  font-size: 1rem;
+  background-color: #FBFBFB;
+  border: 1px solid #F6F6F6;
+  border-radius: 5px;
+}
 
-$bg-color: #ffffff;
-$text-color: #333;
-$baseline: 1.5em;
+.btn-large {
+  @extend .btn;
 
-body {
-  background-color: $bg-color;
-  color: $text-color;
+  font-size: 2rem;
+  padding: 1em 2em;
+  border-radius: 10px;
+}
 
-  p {
-    color: lighten($color: $text-color, $amount: 10%)
+.btn-xlarge {
+  @extend .btn-large;
+
+  font-size: 2.5rem;
+}
+
+.btn-primary {
+  background-color: tomato;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.btn-cta {
+  @extend .btn-xlarge;
+  @extend .btn-primary;
+}
+
+@media screen and (max-width: 1000px) {
+  .submit {
+    background-color: #ccc;
+    color: #999;
   }
 
-}
+  input[type="submit"] {
+    @extend .submit;
 
-.container {
-  margin: $baseline * 2; padding: calc($baseline / 2);
-}
-
-#sidebar ol li,
-footer {
-  padding: $baseline;
+    // @extend .btn;
+  }
 }

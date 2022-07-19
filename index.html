@@ -39,7 +39,7 @@
 				<li><a href="#import-directive">08 - @import directive <i class="fa-solid fa-check text-success"></i></a></li>
 				<li><a href="#partials">09 - Partials <i class="fa-solid fa-check text-success"></i></a></li>
 				<li><a href="#media-directive">10 - @media directive <i class="fa-solid fa-check text-success"></i></a></li>
-				<li><a href="#extend-directive">11 - @extend directive <i class="fa-solid fa-xmark text-danger"></i></a></li>
+				<li><a href="#extend-directive">11 - @extend directive <i class="fa-solid fa-check text-success"></i></a></li>
 				<li><a href="#if-for-directives">12 - @if and @for directives <i class="fa-solid fa-xmark text-danger"></i></a>
 				</li>
 				<li><a href="#each-while-directives">13 - @each and @while directives <i
@@ -833,7 +833,70 @@ nav ul li:<span class="keyword-pseudo-class">after</span> {
 
 				<hr>
 
-				<p></p>
+				<p>
+					Il y a souvent des cas lors de la conception d'une page où une classe doit avoir tous les styles d'une autre
+					classe, ainsi que ses propres styles spécifiques
+				</p>
+				<p>Par exemple, lors de la création d'une div avec une erreur, nous précisons parfois 2 classes. L'un pour
+					indiquer que l'élément est une erreur et la deuxième pour signaler le niveau d'erreur. (fonctionne également
+					avec d'autres types de div)</p>
+				<div class="content-compare">
+					<div>
+						<h2>Scss</h2>
+						<pre>
+&lt;div class="error error--serious"&gt;
+	Oh no! You've been hacked!
+&lt;/div&gt;
+						</pre>
+					</div>
+					<div>
+						<h2>CSS</h2>
+						<pre>
+.error {
+	<span class="keyword-property">order</span>: 1px #f00;
+	<span class="keyword-property">ackground-color</span>: #fdd;
+}
+
+.error--serious {
+	<span class="keyword-property">border-width</span>: 3px;
+}
+						</pre>
+					</div>
+				</div>
+
+				<p>Pour une raison de facilité d'écriture, il est préférable de faire hériter une classe à une autre classe. Ainsi nous ne devons plus réécrire les propriétés en commun.</p>
+
+				<div class="content-compare">
+					<div>
+						<h1>Scss</h1>
+						<pre>
+.error {
+	<span class="keyword-property">border</span>: 1px #f00;
+	<span class="keyword-property">background-color</span>: #fdd;
+
+	&--serious {
+		<span class="keyword-at">@extend</span> .error;
+		<span class="keyword-property">border-width</span>: 3px;
+	}
+}
+						</pre>
+					</div>
+					<div>
+						<h1>CSS</h1>
+						<pre>
+.error, .error--serious {
+	<span class="keyword-property">border</span>: 1px #f00;
+	<span class="keyword-property">background-color</span>: #fdd;
+}
+.error--serious {
+	<span class="keyword-property">border-width</span>: 3px;
+}	
+						</pre>
+					</div>
+				</div>
+
+				<p><i class="fa-solid fa-triangle-exclamation"></i> Attention, vous ne pouvez pas @extend un sélecteur en dehors du sélecteur dans lequel vous êtes.</p>
+
 			</section>
 
 			<section id="if-for-directives">
