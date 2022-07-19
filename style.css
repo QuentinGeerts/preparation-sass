@@ -155,12 +155,12 @@ div.content-compare {
 }
 
 @media only screen and (max-width: 600px) {
-  
+
   div.content-compare * {
     width: 100%;
     margin: auto;
   }
-  
+
   pre {
     /* width: fit-content; */
     padding: 10px 10px;
@@ -219,20 +219,20 @@ button#btn-top:hover {
 }
 
 .keyword-property {
-  color:rgb(203, 88, 146);
+  color: rgb(203, 88, 146);
 }
 
 .keyword-pseudo-class {
-  color:rgb(105, 169, 218);
+  color: rgb(105, 169, 218);
 }
 
 .keyword-at {
-  color:rgb(53, 84, 108);
+  color: rgb(53, 84, 108);
   font-weight: bold;
 }
 
 .keyword-comment {
-  color:rgb(135, 135, 135);
+  color: rgb(135, 135, 135);
   font-weight: 100;
 }
 
@@ -240,4 +240,12 @@ button#btn-top:hover {
 
 .grey {
   color: #aaa;
+}
+
+.text-success {
+  color: rgb(86, 153, 96);
+}
+
+.text-danger {
+  color: rgb(153, 86, 86);
 }
