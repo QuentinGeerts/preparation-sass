@@ -1,3 +1,78 @@
 /* 06 - Data types */
 
 
+// Numbers 
+body {
+  margin: 100px; // Nombre avec unités
+  line-height: 1.5; // Nombre décimal sans unités
+  font-weight: 800; // Nombre entier sans unités
+  padding: 1%; // Pourcentage
+}
+
+// Strings
+.container {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+
+  &::before {
+    content: "This is a pseudo-element";
+  }
+}
+
+$string: "element";
+
+.parent-#{$string} {
+  padding: 1em;
+}
+
+// Colors
+.btn {
+  color: #ccc;
+  background-color: rgb(255, 255, 255);
+  border-color: rgba(0, 0, 0, .5);
+  border-top-color: hsl(155, 33%, 65%);
+  border-bottom-color: blue;
+}
+
+// Lists
+.sidebar {
+  padding: 3em;
+  margin: 1em 2em 3em 4em;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 0 0 3px #999, 10px 10px 20px #555;
+}
+
+body.serif {
+  font: 400 15px/1.5 Georgia, serif;
+}
+
+// Maps
+$colors: (
+  1: #89C3AB,
+  2: #636363
+);
+
+$additional-colors: (
+  'color-1': red,
+  'color-2': blue,
+);
+
+$margins: (
+  tight: 10px 20px,
+  compact: 30px,
+  large: 5em
+);
+
+// Attention que si le séparateur d'élément à l'intérieur est le même en dehors de la liste, alors il faut utiliser les parenthèses
+$fonts: (
+  option-1: (Arial, sans-serif),
+  option-2: (Helvetica, sans-serif)
+);
+
+footer {
+  background-color: map-get($map: $colors, $key: 1);
+  border-color: map-get($map: $additional-colors, $key: 'color-2');
+  margin: map-get($map: $margins, $key: compact);
+  padding: map-get($map: $margins, $key: tight);
+  font-family: map-get($map: $fonts, $key: option-1);
+}
