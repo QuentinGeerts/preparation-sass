@@ -8,6 +8,11 @@ $white: #ffffff;
 
 $baseline: 1.5em;
 
+$line-height: 1.5;
+$base-font-size: 1.125em;
+
+$link-after: " ♥";
+
 /* General Styles */
 * {
   box-sizing: border-box;
@@ -19,7 +24,9 @@ body {
   line-height: 1.5;
   color: $text-color;
 
-  font: 400 1.125em/1.5 $text-font-family;
+  // font: 400 1.125em/1.5 $text-font-family;
+  // font: 400 $base-font-size/$line-height $text-font-family; // Ne fonctionne pas comme voulu
+  font: 400 #{$base-font-size}/#{$line-height} $text-font-family;
 
   &.boxed-layout {
     background-color: #666;
@@ -88,7 +95,7 @@ small {
     background-color: $white;
     padding: 3em;
 
-    border: {
+    border {
       width: 0 1px;
       style: solid;
       color: $border-color;
@@ -136,7 +143,7 @@ nav {
       }
 
       &:after {
-        content: "";
+        content: " - #{$link-after}";
         border: 1px dotted #ccc;
         width: 1px;
         height: 100%;
@@ -163,4 +170,10 @@ nav {
   & .child {
     margin: .5em;
   }
+}
+
+$child: "widget";
+
+.sidebar-#{$child} {
+  padding: $baseline;
 }
