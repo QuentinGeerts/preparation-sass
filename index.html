@@ -40,7 +40,7 @@
 				<li><a href="#partials">09 - Partials <i class="fa-solid fa-check text-success"></i></a></li>
 				<li><a href="#media-directive">10 - @media directive <i class="fa-solid fa-check text-success"></i></a></li>
 				<li><a href="#extend-directive">11 - @extend directive <i class="fa-solid fa-check text-success"></i></a></li>
-				<li><a href="#if-for-directives">12 - @if and @for directives <i class="fa-solid fa-xmark text-danger"></i></a>
+				<li><a href="#if-for-directives">12 - @if and @for directives <i class="fa-solid fa-check text-success"></i></a>
 				</li>
 				<li><a href="#each-while-directives">13 - @each and @while directives <i
 							class="fa-solid fa-xmark text-danger"></i></a></li>
@@ -752,41 +752,30 @@ pre, code {
 						<h1>Scss</h1>
 						<pre>
 nav {
-
 	ul {
 		<span class="keyword-property">list-style</span>: none;
-
 		li {
 			<span class="keyword-property">float</span>: left;
-
 			a {
 				<span class="keyword-property">display</span>: inline-block;
-
 			}
-
 			&<span class="keyword-pseudo-class">:after</span> {
 				<span class="keyword-property">content</span>: " - ";
 				<span class="keyword-property">border</span>: 1px dotted #ccc;
 				<span class="keyword-property">width</span>: 1px;
 				<span class="keyword-property">height</span>: 100%;
 			}
-
 			<span class="keyword-at">@media</span> screen and (max-width: 768px) {
 				<span class="keyword-property">float</span>: none;
-
 				a {
 					<span class="keyword-property">display</span>: block;
 				}
-
 				<span class="keyword-at">@media</span> (orientation: portrait) {
 					<span class="keyword-property">border-bottom</span>: 1px;
 				}
-
 			}
-
 		}
 	}
-
 }
 						</pre>
 					</div>
@@ -864,7 +853,8 @@ nav ul li:<span class="keyword-pseudo-class">after</span> {
 					</div>
 				</div>
 
-				<p>Pour une raison de facilité d'écriture, il est préférable de faire hériter une classe à une autre classe. Ainsi nous ne devons plus réécrire les propriétés en commun.</p>
+				<p>Pour une raison de facilité d'écriture, il est préférable de faire hériter une classe à une autre classe.
+					Ainsi nous ne devons plus réécrire les propriétés en commun.</p>
 
 				<div class="content-compare">
 					<div>
@@ -895,7 +885,8 @@ nav ul li:<span class="keyword-pseudo-class">after</span> {
 					</div>
 				</div>
 
-				<p><i class="fa-solid fa-triangle-exclamation"></i> Attention, vous ne pouvez pas @extend un sélecteur en dehors du sélecteur dans lequel vous êtes.</p>
+				<p><i class="fa-solid fa-triangle-exclamation"></i> Attention, vous ne pouvez pas @extend un sélecteur en dehors
+					du sélecteur dans lequel vous êtes.</p>
 
 			</section>
 
@@ -906,7 +897,122 @@ nav ul li:<span class="keyword-pseudo-class">after</span> {
 
 				<hr>
 
+				<h2>@if directive</h2>
+				<p>Une structure conditionnelle permet d'exécuter un bloc d'instructions en cas de validité de la condition.</p>
+				<p>Si la condition est vérifiée, le bloc d'instructions dans le cas où elle est vérifiée est exécuté. Sinon, le
+					bloc d'instruction dans le cas où elle n'est pas vérifiée est exécuté.</p>
+
+				<p>La règle <code>@if</code> peut être accompagnée de l'instruction <code>@else</code> pour réaliser les
+					instructions dans le cas où la condition n'est pas vérifiée.</p>
+				<p>Une règle supplémentaire existe également, <code>@else if</code> peut être ajouté un nombre indéterminé de
+					fois où nous souhaitons vérifier d'autres conditions.</p>
+
+				<p>Le résultat de la condition est une valeur booléenne. (true ou false)</p>
+
+				<div class="content-compare">
+					<div>
+						<h4>SCSS</h4>
+						<pre>
+<span class="keyword-comment">// cold, warm, neutral</span>
+$<span class="keyword-property">theme</span>: neutral;
+
+	.button {
+		<span class="keyword-at">@if</span> $theme == warm {
+		<span class="keyword-property">background-color</span>: orange;
+	}
+
+	<span class="keyword-at">@else if</span> $theme == cold {
+		<span class="keyword-property">background-color</span>: blue;
+	}
+
+	<span class="keyword-at">@else</span> {
+		<span class="keyword-property">background-color</span>: gray;
+	}
+}
+						</pre>
+					</div>
+					<div>
+						<h4>CSS</h4>
+						<pre>
+.button {
+	<span class="keyword-property">background-color</span>: gray;
+}
+						</pre>
+					</div>
+				</div>
+
+
+				<h2>@for directive</h2>
+
+				<p>La directive <code>@for</code> permet de compter vers le haut ou vers le bas d'un nombre à un autre.</p>
 				<p></p>
+
+				<h3>Utilisation du to : (1 à 4 non compris)</h3>
+				<p>Le mot-clé <code>@for</code> utilise le mot-clé <code>to</code> qui spécifie la plage de la valeur de début jusqu'à avant la valeur de fin.</p>
+				<div class="content-compare">
+					<div>
+						<h4>SCSS</h4>
+						<pre>
+@for $i from 1 to 4 {
+	.btn-#{$i} {
+		background-color: rgb(50*$i, 50*$i, 50*$i);
+	}
+}
+						</pre>
+					</div>
+					<div>
+						<h4>CSS</h4>
+						<pre>
+.btn-1 {
+	background-color: #323232;
+}
+
+.btn-2 {
+	background-color: #646464;
+}
+
+.btn-3 {
+	background-color: #969696;
+}
+						</pre>
+					</div>
+				</div>
+
+				<h3>Utilisation du through : (1 à 4 compris)</h3>
+				<p>Le <code>@for</code> utilise le mot-clé <code>through</code> qui spécifie la plage comprenant à la fois les valeurs de début et de fin.</p>
+				<div class="content-compare">
+					<div>
+						<h4>SCSS</h4>
+						<pre>
+@for $i from 1 through 4 {
+	.btn-#{$i} {
+		background-color: rgb(50*$i, 50*$i, 50*$i);
+	}
+}
+						</pre>
+					</div>
+					<div>
+						<h4>CSS</h4>
+						<pre>
+.btn-1 {
+	background-color: #323232;
+}
+
+.btn-2 {
+	background-color: #646464;
+}
+
+.btn-3 {
+	background-color: #969696;
+}
+
+.btn-4 {
+	background-color: #c8c8c8;
+}
+						</pre>
+					</div>
+				</div>
+
 			</section>
 
 			<section id="each-while-directives">
