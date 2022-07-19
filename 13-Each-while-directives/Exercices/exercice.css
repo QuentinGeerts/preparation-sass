@@ -1,1 +1,57 @@
-/* 01 Syntax - Exercice *//*# sourceMappingURL=exercice.css.map */
+/* 13 @each @while - Exercice */
+
+
+/*
+ * Ecrire le code Sass responsable de la génération du code actuel.
+.
+ *
+ * Vous devez utiliser le moins de code Sass possible et ne pas utiliser de maps.
+ */
+
+/* @each directive */
+#social-twitter {
+  background: url("images/icon-social-twitter.png");
+  color: #58ABEC;
+}
+#social-twitter:before {
+  content: "Follow us on Twitter";
+}
+
+#social-facebook {
+  background: url("images/icon-social-facebook.png");
+  color: #3E578D;
+}
+#social-facebook:before {
+  content: "Connect with us on Facebook";
+}
+
+#social-email {
+  background: url("images/icon-social-email.png");
+  color: #96CC6B;
+}
+#social-email:before {
+  content: "Email us";
+}
+
+
+
+/* @while directive */
+.element-10 {
+  height: 25em;
+}
+
+.element-8 {
+  height: 20em;
+}
+
+.element-6 {
+  height: 15em;
+}
+
+.element-4 {
+  height: 10em;
+}
+
+.element-2 {
+  height: 5em;
+}
