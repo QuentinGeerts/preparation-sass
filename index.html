@@ -100,30 +100,29 @@
         <p>La seconde syntaxe est celle d'origine de Sass. Elle s'écrit de manière indentée et sans accolade et point
           virgule.</p>
 
-
         <div class="content-compare">
           <div>
             <h2>Exemple de code en Sass</h2>
 
             <pre>
               @mixin button-base() {
-                @include typography(button);
-                @include ripple-surface;
-                @include ripple-radius-bounded;
-              
-                display: inline-flex;
-                position: relative;
-                height: $button-height;
-                border: none;
-                vertical-align: middle;
-              
-                &:hover { cursor: pointer; }
-              
-                &:disabled {
-                  color: $mdc-button-disabled-ink-color;
-                  cursor: default;
-                  pointer-events: none;
-                }
+                  @include typography(button);
+                  @include ripple-surface;
+                  @include ripple-radius-bounded;
+                
+                  display: inline-flex;
+                  position: relative;
+                  height: $button-height;
+                  border: none;
+                  vertical-align: middle;
+                
+                  &:hover { cursor: pointer; }
+                
+                  &:disabled {
+                      color: $mdc-button-disabled-ink-color;
+                      cursor: default;
+                      pointer-events: none;
+                  }
               }
             </pre>
 
@@ -132,23 +131,23 @@
             <h2>Exemple de code en Scss</h2>
             <pre>
               @mixin button-base()
-                @include typography(button)
-                @include ripple-surface
-                @include ripple-radius-bounded
+                  @include typography(button)
+                  @include ripple-surface
+                  @include ripple-radius-bounded
 
-                display: inline-flex
-                position: relative
-                height: $button-height
-                border: none
-                vertical-align: middle
+                  display: inline-flex
+                  position: relative
+                  height: $button-height
+                  border: none
+                  vertical-align: middle
 
-                &:hover
-                  cursor: pointer
+                  &:hover
+                      cursor: pointer
 
-                &:disabled
-                  color: $mdc-button-disabled-ink-color
-                  cursor: default
-                  pointer-events: none
+                  &:disabled
+                      color: $mdc-button-disabled-ink-color
+                      cursor: default
+                      pointer-events: none
             </pre>
           </div>
         </div>
