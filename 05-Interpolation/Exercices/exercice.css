@@ -1,0 +1,26 @@
+/* 05 Interpolation - Exercice */
+
+/*
+ * Vous devez créer le fichier scss original
+ * Les prérequis sont que les noms de classe des boutons, valeurs des couleurs, font family, tailles et hauteur de ligne doivent toutes être stockées dans des variables.
+ */
+
+
+body {
+  font: 1em/1.5 Helvetica, Arial, sans-serif;
+}
+
+.btn {
+  display: inline-block;
+  padding: .5em 1em;
+}
+
+.btn-primary {
+  background-color: #89C3AB;
+  color: #fff;
+}
+
+.btn-default {
+  background-color: #686868;
+  color: #fff;
+}

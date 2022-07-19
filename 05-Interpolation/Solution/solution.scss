@@ -1,1 +1,33 @@
 /* 05 Interpolation - Solution */
+
+// Variables
+$base-font-family: Helvetica, Arial, sans-serif;
+$base-font-size: 1em;
+$base-line-height: 1.5;
+
+$color-1: #89C3AB;
+$color-2: #686868;
+$color-3: #fff;
+
+$btn-name-1: "primary";
+$btn-name-2: "default";
+
+body {
+  font: #{$base-font-size}/#{$base-line-height} #{$base-font-family};
+}
+
+.btn {
+  display: inline-block;
+  padding: $base-font-size/2 $base-font-size;
+
+  &-#{$btn-name-1} {
+    background-color: $color-1;
+    color: $color-3;
+
+  }
+
+  &-#{$btn-name-2} {
+    background-color: $color-2;
+    color: $color-3;
+  }
+}

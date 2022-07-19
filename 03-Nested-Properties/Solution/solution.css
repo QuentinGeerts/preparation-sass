@@ -1,0 +1,44 @@
+/* 03 Nested properties - Solution */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.45;
+}
+
+p {
+  margin-bottom: 1.5em;
+}
+p a {
+  text-decoration: none;
+  color: #3bb5a5;
+}
+p a:hover {
+  color: write;
+  background-color: #333;
+}
+
+blockquote {
+  font-family: serif;
+  font-size: 150%;
+  font-style: italic;
+}
+blockquote cite a {
+  color: #333;
+}
+blockquote cite a:hover {
+  text-decoration: underline;
+  text-transform: uppercase;
+  color: #3bb5a5;
+}
+blockquote cite a::before {
+  content: "- ";
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+.fluid-layout .container {
+  width: 85%;
+}/*# sourceMappingURL=solution.css.map */
