@@ -12,7 +12,7 @@ body {
   margin: 10px auto 15px;
 }
 
-header h1 + h2 {
+header h1+h2 {
   margin: 30px auto;
   color: #333333c9;
 }
@@ -87,6 +87,24 @@ section h1 a:hover {
   color: #3333333a;
 }
 
+div.content-compare {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+div.content-compare * {
+  width: 80%;
+}
+
+@media only screen and (max-width: 1400px) {
+  div.content-compare {
+    flex-wrap: wrap;
+  }
+  div.content-compare * {
+    width: 100%;
+  }
+}
+
 /*
  * Tools
  */
@@ -96,12 +114,26 @@ hr {
   border-style: dashed;
 }
 
+pre {
+  background-color: #333;
+  color: white;
+  width: cal(fit-content + 30);
+  font-family: inherit;
+}
+
 code {
   background-color: #333;
-  padding: 5px 15px;
+  padding: 5px 12px;
   border-radius: 5px;
   color: white;
+}
 
+code a {
+  color: white;
+  text-decoration: none;
+  font-size: .7em;
+  padding: 0px;
+  vertical-align: 10%;
 }
 
 button#btn-top {
@@ -117,9 +149,9 @@ button#btn-top {
 
   z-index: 99;
   cursor: pointer;
-  padding: 10px;
+  padding: 8px 12px;
   border-radius: 4px;
-  
+
   background-color: #333;
   color: white;
 }
@@ -127,4 +159,17 @@ button#btn-top {
 button#btn-top:hover {
   background-color: #33333380;
   color: #333;
+}
+
+
+/*
+ * Tools
+ */
+
+.keyword {
+  color: rgb(238, 238, 50);
+}
+
+.grey {
+  color: #aaa;
 }

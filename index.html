@@ -10,7 +10,7 @@
 
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="02-Nesting/Demo/css/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 </head>
 
 <body>
@@ -19,7 +19,7 @@
 
     <header>
       <h1>Cours</h1>
-      <h2>Sass</h2>
+      <h2>Sass <code><a href="https://github.com/QuentinGeerts/preparation-sass" target="_blank">GitHub</a></code></h2>
     </header>
 
     <nav>
@@ -51,8 +51,12 @@
 
         <hr>
 
-        <p><abbr title="Syntactically Awesome Style Sheets">Sass</abbr> est un pré-processeur qui permet de transformer
-          un type de données en un autre type de données.</p>
+        <p>
+          <abbr title="Syntactically Awesome Style Sheets">Sass</abbr> est un préprocesseur qui permet de compiler et/ou
+          interprété du Sass ou Scss en CSS.
+        </p>
+
+        <p>Un préprocesseur permet de transformer un type de données en un autre type de données.</p>
 
         <h2>Outils</h2>
 
@@ -65,7 +69,19 @@
           Pour installer Sass de manière globale sur votre machine :
         </p>
 
-        <code>npm install -g sass</code>
+        <code><span class="keyword">npm</span> install <span class="grey">-g</span> sass</code>
+
+        <p>
+          Pour lancer la compilation :
+        </p>
+
+        <p>
+          <code><span class="keyword">sass</span> <span class="grey">--watch</span> dossier_sass/fichier.scss dossier_css/fichier.css</code>
+        </p>
+        <p>
+          <code><span class="keyword">sass</span> <span class="grey">--watch</span> dossier_sass:dossier_css</code>
+        </p>
+
 
       </section>
 
@@ -76,19 +92,72 @@
 
         <hr>
 
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum vitae itaque inventore porro quod praesentium
-          dolores saepe alias officiis. Non quaerat rerum porro tempore nostrum earum ad odit vel fuga dolorem sint quod
-          laudantium ratione ut quo, maxime sit nulla? Voluptas deleniti ipsa nemo quibusdam ut mollitia debitis
-          suscipit quia sapiente, magnam minima error commodi quod veniam repellendus quo ea! Nesciunt deleniti sequi
-          vel, facilis debitis obcaecati illo, tenetur, sapiente voluptates molestiae similique ipsum? Veniam,
-          recusandae! Debitis ducimus quae illum adipisci minima! Totam sint commodi, ipsa numquam sapiente voluptatem
-          debitis iste, ipsam quo temporibus similique error repellat vel ea molestiae soluta! Aperiam obcaecati culpa
-          optio enim illum, consequatur at, facilis ratione delectus nobis aliquam natus quam eos reiciendis aut minima!
-          Praesentium, soluta tempora, corporis debitis nesciunt voluptas recusandae similique ipsam reprehenderit
-          voluptatum ad porro. Recusandae adipisci exercitationem, officiis perspiciatis delectus aperiam mollitia
-          facere accusantium expedita placeat iusto modi iste repellendus?
+        <p>Lorsque nous utilisons Sass, nous avons la posibilité entre deux formes d'écriture : <code>.sass</code> ou
+          <code>.scss</code>
         </p>
+        <p>La syntaxe Scss est une surcouche du CSS, ce qui signifie que toutes les instructions valides en CSS le sont
+          également en Scss. Cette syntaxe est plus facile à utiliser grâce à sa ressemblance avec le CSS.</p>
+        <p>La seconde syntaxe est celle d'origine de Sass. Elle s'écrit de manière indentée et sans accolade et point
+          virgule.</p>
+
+
+        <div class="content-compare">
+          <div>
+            <h2>Exemple de code en Sass</h2>
+
+            <pre>
+              @mixin button-base() {
+                @include typography(button);
+                @include ripple-surface;
+                @include ripple-radius-bounded;
+              
+                display: inline-flex;
+                position: relative;
+                height: $button-height;
+                border: none;
+                vertical-align: middle;
+              
+                &:hover { cursor: pointer; }
+              
+                &:disabled {
+                  color: $mdc-button-disabled-ink-color;
+                  cursor: default;
+                  pointer-events: none;
+                }
+              }
+            </pre>
+
+          </div>
+          <div>
+            <h2>Exemple de code en Scss</h2>
+            <pre>
+              @mixin button-base()
+                @include typography(button)
+                @include ripple-surface
+                @include ripple-radius-bounded
+
+                display: inline-flex
+                position: relative
+                height: $button-height
+                border: none
+                vertical-align: middle
+
+                &:hover
+                  cursor: pointer
+
+                &:disabled
+                  color: $mdc-button-disabled-ink-color
+                  cursor: default
+                  pointer-events: none
+            </pre>
+          </div>
+        </div>
+
+
+
+
+
+
       </section>
       <section id="nesting">
         <header>
