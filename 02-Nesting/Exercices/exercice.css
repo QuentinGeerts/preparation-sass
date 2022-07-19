@@ -1,0 +1,51 @@
+/* 02 Nesting - Exercice */
+
+/*
+ * Transformer le css compilé dans le fichier scss original
+ */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+p {
+  margin-bottom: 1.5em;
+}
+
+p a {
+  text-decoration: none;
+  color: #cd746a;
+}
+
+p a:hover {
+  color: #fff;
+  background-color: #333;
+}
+
+blockquote {
+  font-style: italic;
+}
+
+blockquote cite a {
+  color: #333;
+}
+
+blockquote cite a:hover {
+  color: #cd746a;
+  text-decoration: underline;
+}
+
+blockquote cite:before {
+  content: "- ";
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.fluid-layout .container {
+  width: 85%;
+}

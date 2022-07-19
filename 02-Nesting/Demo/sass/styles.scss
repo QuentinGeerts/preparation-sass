@@ -13,15 +13,28 @@ body {
   line-height: 1.5;
   font-weight: 400;
   color: #333;
+
+  &.boxed-layout {
+    background-color: #666;
+  }
 }
 
 p {
   margin-bottom: 1.3em;
   color: #666;
+
+  a {
+    color: yellowgreen;
+  }
 }
 
 a {
   text-decoration: none;
+
+  &:hover {
+    text-decoration: underline wavy;
+  }
+
 }
 
 h1,
@@ -59,4 +72,74 @@ small {
 .container {
   width: 90%;
   margin: 0 auto;
+
+  .boxed-layout & {
+    background-color: #fff;
+    padding: 3em;
+    border: 1px solid #afafaf;
+    border-width: 0 1px;
+  }
+
+  >header {
+    h1 {
+      font-size: 4em;
+      font-weight: 800;
+    }
+  }
+
+}
+
+nav {
+
+  padding: 3em 0;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    overflow: hidden;
+
+    li {
+      float: left;
+
+      a {
+        display: inline-block;
+
+        color: #333;
+        padding: 1em;
+
+        &:hover {
+          text-decoration: none;
+          background-color: #afafaf;
+        }
+
+      }
+
+      &:after {
+        content: "";
+        border: 1px dotted #ccc;
+        width: 1px;
+        height: 100%;
+      }
+
+    }
+  }
+
+}
+
+#demo {
+  &-child {
+    margin: .5em;
+  }
+
+  &child {
+    margin: .5em;
+  }
+
+  &.child {
+    margin: .5em;
+  }
+
+  & .child {
+    margin: .5em;
+  }
 }
