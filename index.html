@@ -536,19 +536,53 @@ p {
 
 				<hr>
 
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum vitae itaque inventore porro quod praesentium
-					dolores saepe alias officiis. Non quaerat rerum porro tempore nostrum earum ad odit vel fuga dolorem sint quod
-					laudantium ratione ut quo, maxime sit nulla? Voluptas deleniti ipsa nemo quibusdam ut mollitia debitis
-					suscipit quia sapiente, magnam minima error commodi quod veniam repellendus quo ea! Nesciunt deleniti sequi
-					vel, facilis debitis obcaecati illo, tenetur, sapiente voluptates molestiae similique ipsum? Veniam,
-					recusandae! Debitis ducimus quae illum adipisci minima! Totam sint commodi, ipsa numquam sapiente voluptatem
-					debitis iste, ipsam quo temporibus similique error repellat vel ea molestiae soluta! Aperiam obcaecati culpa
-					optio enim illum, consequatur at, facilis ratione delectus nobis aliquam natus quam eos reiciendis aut minima!
-					Praesentium, soluta tempora, corporis debitis nesciunt voluptas recusandae similique ipsam reprehenderit
-					voluptatum ad porro. Recusandae adipisci exercitationem, officiis perspiciatis delectus aperiam mollitia
-					facere accusantium expedita placeat iusto modi iste repellendus?
-				</p>
+				<p>Sass prend en charge une poignée d'opérateurs utiles pour travailler avec différentes valeurs.</p>
+
+				<h3>Opérateurs arithmétique : <code>+</code> <code>-</code> <code>*</code> <code>/</code></h3>
+
+				<p>Les opérateurs mathématiques sont utilisés par réaliser des opérations classiques entre les nombres, seulement pour les nombres avec la même unité (px => px, vh => vh, etc...)</p>
+
+				<p>Les deux membres de part et d'autre du signe sont calculés sur base de l'unité à gauche du signe.</p>
+				<p>Attention lors d'une multiplication, l'unité y est également multiplié, il faut donc l'omettre pour la partie de droite.</p>
+				<code>12px + 12px // 24px</code>
+				<code>1in - 10px; // 0.8958333333in</code>
+				<code>12px * 2px // 24px*px</code>
+				<code>12px / 12px // 12px / 12px</code>
+
+				<p>Pour la division, vous devez mettre l'expression entre <code>()</code> pour la réaliser.</p>
+
+				<h3>Opérateurs d'égalité : <code>==</code> <code>!=</code></h3>
+
+				<p>Les opérateurs d'égalité permettent de vérifier l'égalité entre le membre de gauche et celui de droite du signe.</p>
+				<p><code>==</code> vérifie si les deux valeurs sont les mêmes. Dans le cas où ils sont les mêmes, la valeur <code>true</code> est renvoyée, dans le cas contraire <code>false</code>.</p>
+				<p><code>!=</code> fait l'inverse du <code>==</code>.</p>
+
+				<h3>Opérateurs relationnels : <code><</code> <code>></code> <code><=</code> <code>>=</code></h3>
+
+				<p>L'opérateur relationnels déterminent si les nombres sont plus grands ou plus petits les uns que les autres. Ils convertissent automatiquement entre les unités compatibles.</p>
+
+				<p><code>></code> retourne si le premier élément est supérieur par rapport au second.</p>
+				<p><code><</code> retourne si le premier élément est inférieur par rapport au second.</p>
+				<p><code>>=</code> retourne si le premier élément est supérieur OU égal par rapport au second.</p>
+				<p><code><=</code> retourne si le premier élément est inférieur OU égal par rapport au second.</p>
+
+				<h3>Opérateurs de concaténation : <code>+</code> <code>-</code></h3>
+
+				<p>La concaténation permet de coller deux valeurs ensemble. (cfr. Interpolation).</p>
+
+				<p><code>+</code> retourne une chaine de caractères contenant les deux expressions. Si l'expression de gauche est entre guillemet, le résultat le sera également. Sans guillemet dans le cas contraire.</p>
+
+				<p><code>-</code> retourne une chaine de caractères sans guillemet contenant les deux expressions séparées par -.</p>
+				<p>Il s'agit d'un ancien opérateur, utilisez l'interpolation à la place.</p>
+
+				<h3>Opérateurs booléens : <code>not</code> <code>and</code> <code>or</code></h3>
+
+				<p>Contrairement aux autres langages, Sass utilise des mots plutôt que des symbales pour les opérateurs booléens.</p>
+
+				<p><code>not</code> retourne la valeur opposée de l'expression. Elle transforme vrai en faux et faux en vrai.</p>
+				<p><code>and</code> retourne vrai si la valeur des deux expressions est à vrai. Sinon faux.</p>
+				<p><code>or</code> retourne vrai si l'une des valeurs des deux expression est à vrai. Sinon faux.</p>
+
 			</section>
 
 			<section id="import-directive">

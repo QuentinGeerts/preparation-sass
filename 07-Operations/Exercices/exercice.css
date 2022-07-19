@@ -1,1 +1,33 @@
-/* 01 Syntax - Exercice *//*# sourceMappingURL=exercice.css.map */
+/* 07 - Operations - Exercice */
+
+/*
+ * Vous devez réécrire le scss original tout en respectant certaines règles.
+ *
+ * 1. Vous ne pouvez pas utiliser des nombres ou chaines de caractères comme valeur des propriétés.
+ *    Vous ne pouvez seulement utiliser la valeur 100%, la fonction map-get() et toutes sortes d'opération que vous verrez.
+ *
+ * 2. Toutes les valeurs se retrouvent dans des maps.
+ *
+ */
+
+body {
+  font: 1em/1.5 Helvetica, Arial, sans-serif;
+  color: #999;
+}
+
+.large-text {
+  font-size: 200%;
+}
+
+.small-text {
+  font-size: 75%;
+}
+
+blockquote {
+  padding: 1.5em;
+  margin: 3em;
+}
+
+blockquote cite::before {
+  content: "- ";
+}
