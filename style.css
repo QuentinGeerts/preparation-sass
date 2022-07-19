@@ -12,6 +12,10 @@ body {
   margin: 10px auto 15px;
 }
 
+header h1 a {
+  text-decoration: none;
+}
+
 header h1+h2 {
   margin: 30px auto;
   color: #333333c9;
@@ -76,13 +80,15 @@ section {
 }
 
 section h1,
-section h1 a {
+section h1 a,
+h1 a {
   transition: .4s;
   color: black;
 }
 
 section h1:hover,
-section h1 a:hover {
+section h1 a:hover,
+h1 a:hover {
   transition: .4s;
   color: #3333333a;
 }
@@ -98,7 +104,7 @@ div.content-compare * {
 
 pre {
   tab-size: 2;
-  padding: 20px 0 ;
+  padding: 20px 0;
   border-radius: 5px;
   white-space: pre-wrap;
   word-break: break-all;
