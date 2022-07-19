@@ -12,6 +12,10 @@ body {
   margin: 10px auto 15px;
 }
 
+.hide {
+  display: none;
+}
+
 @media only screen and (max-width: 600px) {
   .container {
     width: 90%;
@@ -115,8 +119,8 @@ pre {
   width: fit-content;
   font-family: inherit;
   padding: 20px 40px;
-  white-space: pre-wrap;
-  word-break: break-all;
+  /* white-space: pre-wrap;
+  word-break: break-all; */
   border-radius: 10px;
   tab-size: 4;
 }
@@ -145,15 +149,16 @@ div.content-compare {
 }
 
 @media only screen and (max-width: 600px) {
-
+  
   div.content-compare * {
     width: 100%;
     margin: auto;
   }
-
+  
   pre {
     /* width: fit-content; */
     padding: 10px 10px;
+    overflow-x: scroll;
   }
 }
 

@@ -18,7 +18,12 @@
 
 		<header>
 			<h1><a href=".">Cours</a></h1>
-			<h2>Sass <code><a href="https://github.com/QuentinGeerts/preparation-sass" target="_blank">GitHub</a></code></h2>
+			<h2>Sass
+				<code>
+				<!-- <code class="hide"> -->
+					<a href="https://github.com/QuentinGeerts/preparation-sass" target="_blank">GitHub</a>
+				</code>
+			</h2>
 		</header>
 
 		<nav>
@@ -152,6 +157,7 @@
 				</div>
 
 			</section>
+
 			<section id="nesting">
 				<header>
 					<h1><a href="#nesting">Nesting</a></h1>
@@ -202,7 +208,6 @@ a {
 }
 						</pre>
 					</div>
-
 					<div>
 
 						<h2>Exemple Scss</h2>
@@ -253,9 +258,11 @@ a {
 
 				</div>
 
-				<p>Le sélecteur parent permet de reprendre le nom du parent. Le nom du parent sera injecté dans le code après compilation.</p>
+				<p>Le sélecteur parent permet de reprendre le nom du parent. Le nom du parent sera injecté dans le code après
+					compilation.</p>
 
 			</section>
+
 			<section id="nested-properties">
 				<header>
 					<h1><a href="#nested-properties">Nested properties</a></h1>
@@ -264,19 +271,67 @@ a {
 				<hr>
 
 				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum vitae itaque inventore porro quod praesentium
-					dolores saepe alias officiis. Non quaerat rerum porro tempore nostrum earum ad odit vel fuga dolorem sint quod
-					laudantium ratione ut quo, maxime sit nulla? Voluptas deleniti ipsa nemo quibusdam ut mollitia debitis
-					suscipit quia sapiente, magnam minima error commodi quod veniam repellendus quo ea! Nesciunt deleniti sequi
-					vel, facilis debitis obcaecati illo, tenetur, sapiente voluptates molestiae similique ipsum? Veniam,
-					recusandae! Debitis ducimus quae illum adipisci minima! Totam sint commodi, ipsa numquam sapiente voluptatem
-					debitis iste, ipsam quo temporibus similique error repellat vel ea molestiae soluta! Aperiam obcaecati culpa
-					optio enim illum, consequatur at, facilis ratione delectus nobis aliquam natus quam eos reiciendis aut minima!
-					Praesentium, soluta tempora, corporis debitis nesciunt voluptas recusandae similique ipsam reprehenderit
-					voluptatum ad porro. Recusandae adipisci exercitationem, officiis perspiciatis delectus aperiam mollitia
-					facere accusantium expedita placeat iusto modi iste repellendus?
+					L'utilisation de propriétés imbriquées permet de ne pas répéter plusieurs fois ces propriétés. Nous pouvons
+					écrire comme namespace (espace de noms), le nom de la propriété. Par exemple, toutes les propriétés font
+					(font-style, font-size, font-weight, etc.) peuvent être raccourcies et donc n'écrire qu'une seule fois
+					l'espace de noms.
 				</p>
+
+				<div class="content-compare">
+					<div>
+						<h2>Exemple SCSS</h2>
+						<pre>
+.enlarge {
+	<span class="keyword-property">font-size</span>: 14px;
+	<span class="keyword-property">transition</span>: {
+		property: font-size;
+		duration: 4s;
+		delay: 2s;
+	}
+
+	&:<span class="keyword-pseudo-class">hover</span> { font-size: 36px; }
+}
+						</pre>
+					</div>
+					<div>
+						<h2>Exemple SCSS</h2>
+						<pre>
+.enlarge {
+	<span class="keyword-property">font-size</span>: 14px;
+	<span class="keyword-property">transition-property</span>: font-size;
+	<span class="keyword-property">transition-duration</span>: 4s;
+	<span class="keyword-property">transition-delay</span>: 2s;
+}
+.enlarge:<span class="keyword-pseudo-class">hover</span> {
+	<span class="keyword-property">font-size</span>: 36px;
+}
+
+						</pre>
+					</div>
+					<div>
+						<h2>Ecriture raccourcie Scss</h2>
+						<pre>
+.info-page {
+	<span class="keyword-property">margin</span>: auto {
+		bottom: 10px;
+		top: 2px;
+	}
+}
+						</pre>
+					</div>
+					<div>
+						<h2>Ecriture raccourcie CSS</h2>
+						<pre>
+.info-page {
+	<span class="keyword-property">margin</span>: auto;
+	<span class="keyword-property">margin-bottom</span>: 10px;
+	<span class="keyword-property">margin-top</span>: 2px;
+}							
+						</pre>
+					</div>
+				</div>
 			</section>
+
 			<section id="variables">
 				<header>
 					<h1><a href="#variables">Variables</a></h1>
@@ -284,20 +339,46 @@ a {
 
 				<hr>
 
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum vitae itaque inventore porro quod praesentium
-					dolores saepe alias officiis. Non quaerat rerum porro tempore nostrum earum ad odit vel fuga dolorem sint quod
-					laudantium ratione ut quo, maxime sit nulla? Voluptas deleniti ipsa nemo quibusdam ut mollitia debitis
-					suscipit quia sapiente, magnam minima error commodi quod veniam repellendus quo ea! Nesciunt deleniti sequi
-					vel, facilis debitis obcaecati illo, tenetur, sapiente voluptates molestiae similique ipsum? Veniam,
-					recusandae! Debitis ducimus quae illum adipisci minima! Totam sint commodi, ipsa numquam sapiente voluptatem
-					debitis iste, ipsam quo temporibus similique error repellat vel ea molestiae soluta! Aperiam obcaecati culpa
-					optio enim illum, consequatur at, facilis ratione delectus nobis aliquam natus quam eos reiciendis aut minima!
-					Praesentium, soluta tempora, corporis debitis nesciunt voluptas recusandae similique ipsam reprehenderit
-					voluptatum ad porro. Recusandae adipisci exercitationem, officiis perspiciatis delectus aperiam mollitia
-					facere accusantium expedita placeat iusto modi iste repellendus?
-				</p>
+				<p>La notion de variable en Sass est la même que dans n'importe quel langage de programmation. Le but étant de
+					stocker une valeur sous un alias et d'utiliser l'alias plutôt que la valeur elle-même à divers endroit. Cela
+					permet ainsi d'éviter de recopier la valeur plusieurs fois mais aussi de ne modifier la valeur qu'à un seul
+					endroit pour toutes les modifier.</p>
+
+				<p>Une variable en Sass s'écrit de la manière suivante :</p>
+				<code>$<span class="keyword-property">variable_name</span> : some value;</code>
+
+				<p>Ainsi une variable commencera par un dollar et finira par un point virgule. La structure se base à la
+					déclaration d'une propriété CSS classique.</p>
+
+				<div class="content-compare">
+					<div>
+						<h2>Scss</h2>
+						<pre>
+$<span class="keyword-property">txtcolor</span>:#008000;
+$<span class="keyword-property">fontSize</span>: 20px;
+
+p{
+	<span class="keyword-property">color</span>:$<span class="keyword-property">txtcolor</span>;
+		<span class="keyword-property">font-size</span>:$<span class="keyword-property">fontSize</span>;
+}
+						</pre>
+					</div>
+					<div>
+						<h2>CSS</h2>
+						<pre>
+p {
+	<span class="keyword-property">color</span>: #008000;
+	<span class="keyword-property">font-size</span>: 20px;
+}
+						</pre>
+					</div>
+				</div>
+
+				<p><i class="fa-solid fa-triangle-exclamation"></i> La portée des variables ! Lorsqu'une variable est déclarée
+					dans un bloc, elle n'est accessible uniquement dans ce bloc.</p>
+
 			</section>
+
 			<section id="interpolation">
 				<header>
 					<h1><a href="#interpolation">Interpolation</a></h1>
