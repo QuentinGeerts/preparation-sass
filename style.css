@@ -104,7 +104,7 @@ h1 a:hover {
   color: #3333333a;
 }
 
-section h3 {
+section h3, section h2 {
   margin: 35px auto 10px;
   color: #4F4F4F;
   font-style: italic;

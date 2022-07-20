@@ -43,7 +43,7 @@
 				<li><a href="#if-for-directives">12 - @if and @for directives <i class="fa-solid fa-check text-success"></i></a>
 				</li>
 				<li><a href="#each-while-directives">13 - @each and @while directives <i
-							class="fa-solid fa-xmark text-danger"></i></a></li>
+							class="fa-solid fa-check text-success"></i></a></li>
 				<li><a href="#mixins">14 - Mixins <i class="fa-solid fa-xmark text-danger"></i></a></li>
 			</ul>
 		</nav>
@@ -108,7 +108,7 @@
 
 				<div class="content-compare">
 					<div>
-						<h2>Exemple de code en Sass</h2>
+						<h4>Exemple de code en Sass</h4>
 
 						<pre>
 <span class="keyword-at">@mixin</span> button-base() {
@@ -133,7 +133,7 @@
 
 					</div>
 					<div>
-						<h2>Exemple de code en Scss</h2>
+						<h4>Exemple de code en Scss</h4>
 						<pre>
 <span class="keyword-at">@mixin</span> button-base()
 		<span class="keyword-at">@include</span> typography(button)
@@ -175,7 +175,7 @@
 
 				<div class="content-compare">
 					<div>
-						<h2>Exemple de Nesting</h2>
+						<h4>Exemple de Nesting</h4>
 						<pre>
 nav {
 	ul {
@@ -195,7 +195,7 @@ nav {
 					</div>
 
 					<div>
-						<h2>Sélecteur parent : &</h2>
+						<h4>Sélecteur parent : &</h4>
 						<pre>
 a {
 	<span class="keyword-property">text-decoration</span>: none;
@@ -208,7 +208,7 @@ a {
 					</div>
 					<div>
 
-						<h2>Exemple Scss</h2>
+						<h4>Exemple Scss</h4>
 
 						<pre>
 <span class="keyword-pseudo-class">#demo</span> {
@@ -232,7 +232,7 @@ a {
 
 
 					<div>
-						<h2>Exemple CSS</h2>
+						<h4>Exemple CSS</h4>
 						<pre>
 
 <span class="keyword-pseudo-class">#demo-child</span> {
@@ -275,7 +275,7 @@ a {
 
 				<div class="content-compare">
 					<div>
-						<h2>Exemple SCSS</h2>
+						<h4>Exemple SCSS</h4>
 						<pre>
 .enlarge {
 	<span class="keyword-property">font-size</span>: 14px;
@@ -289,7 +289,7 @@ a {
 }</pre>
 					</div>
 					<div>
-						<h2>Exemple SCSS</h2>
+						<h4>Exemple SCSS</h4>
 						<pre>
 .enlarge {
 	<span class="keyword-property">font-size</span>: 14px;
@@ -302,7 +302,7 @@ a {
 }</pre>
 					</div>
 					<div>
-						<h2>Ecriture raccourcie Scss</h2>
+						<h4>Ecriture raccourcie Scss</h4>
 						<pre>
 .info-page {
 	<span class="keyword-property">margin</span>: auto {
@@ -312,7 +312,7 @@ a {
 }</pre>
 					</div>
 					<div>
-						<h2>Ecriture raccourcie CSS</h2>
+						<h4>Ecriture raccourcie CSS</h4>
 						<pre>
 .info-page {
 	<span class="keyword-property">margin</span>: auto;
@@ -343,7 +343,7 @@ a {
 
 				<div class="content-compare">
 					<div>
-						<h2>Scss</h2>
+						<h4>Scss</h4>
 						<pre>
 $<span class="keyword-property">txtcolor</span>:#008000;
 $<span class="keyword-property">fontSize</span>: 20px;
@@ -354,7 +354,7 @@ p{
 }</pre>
 					</div>
 					<div>
-						<h2>CSS</h2>
+						<h4>CSS</h4>
 						<pre>
 p {
 	<span class="keyword-property">color</span>: #008000;
@@ -383,7 +383,7 @@ p {
 
 				<div class="content-compare">
 					<div>
-						<h2>Scss</h2>
+						<h4>Scss</h4>
 						<pre>
 <span class="keyword-at">@mixin</span> <span class="keyword-property">corner-icon</span>($<span class="keyword-property">name</span>, $<span class="keyword-property">top-or-bottom</span>, $<span class="keyword-property">left-or-right</span>) {
 	.icon-#{$name} {
@@ -397,7 +397,7 @@ p {
 <span class="keyword-at">@include</span> corner-icon("mail", top, left);</pre>
 					</div>
 					<div>
-						<h2>CSS</h2>
+						<h4>CSS</h4>
 						<pre>
 .icon-mail {
 	<span class="keyword-property">background-image</span>: url("/icons/mail.svg");
@@ -495,7 +495,7 @@ p {
 
 				<div class="content-compare">
 					<div>
-						<h2>Scss</h2>
+						<h4>Scss</h4>
 						<pre>
 <span class="keyword-at">@mixin</span> <span class="keyword-property">avatar</span>($size, $circle: false) {
 	<span class="keyword-property">width</span>: $size;
@@ -515,7 +515,7 @@ p {
 						</pre>
 					</div>
 					<div>
-						<h2>CSS</h2>
+						<h4>CSS</h4>
 						<pre>
 .square-av {
 	<span class="keyword-property">width</span>: 100px;
@@ -618,7 +618,7 @@ p {
 
 				<div class="content-compare">
 					<div>
-						<h2>SCSS</h2>
+						<h4>SCSS</h4>
 						<div>
 							<pre>
 <span class="keyword-comment">// foundation/_code.scss</span>
@@ -652,7 +652,7 @@ ul, ol {
 
 					</div>
 					<div>
-						<h2>CSS</h2>
+						<h4>CSS</h4>
 						<pre>
 code {
 	<span class="keyword-property">padding</span>: .25em;
@@ -708,7 +708,7 @@ ul ul, ol ol {
 
 				<div class="content-compare">
 					<div>
-						<h2>SCSS</h2>
+						<h4>SCSS</h4>
 						<pre>
 <span class="keyword-comment">// _theme.scss</span>
 pre, code {
@@ -724,7 +724,7 @@ pre, code {
 						</pre>
 					</div>
 					<div>
-						<h2>CSS</h2>
+						<h4>CSS</h4>
 						<pre>
 .theme-sample pre, .theme-sample code {
 	<span class="keyword-property">font-family</span>: 'Source Code Pro', Helvetica, Arial;
@@ -749,7 +749,7 @@ pre, code {
 
 				<div class="content-compare">
 					<div>
-						<h1>Scss</h1>
+						<h4>Scss</h4>
 						<pre>
 nav {
 	ul {
@@ -780,7 +780,7 @@ nav {
 						</pre>
 					</div>
 					<div>
-						<h1>CSS</h1>
+						<h4>CSS</h4>
 						<pre>
 nav ul {
 	<span class="keyword-property">list-style</span>: none;
@@ -831,7 +831,7 @@ nav ul li:<span class="keyword-pseudo-class">after</span> {
 					avec d'autres types de div)</p>
 				<div class="content-compare">
 					<div>
-						<h2>Scss</h2>
+						<h4>Scss</h4>
 						<pre>
 &lt;div class="error error--serious"&gt;
 	Oh no! You've been hacked!
@@ -839,7 +839,7 @@ nav ul li:<span class="keyword-pseudo-class">after</span> {
 						</pre>
 					</div>
 					<div>
-						<h2>CSS</h2>
+						<h4>CSS</h4>
 						<pre>
 .error {
 	<span class="keyword-property">order</span>: 1px #f00;
@@ -858,7 +858,7 @@ nav ul li:<span class="keyword-pseudo-class">after</span> {
 
 				<div class="content-compare">
 					<div>
-						<h1>Scss</h1>
+						<h4>Scss</h4>
 						<pre>
 .error {
 	<span class="keyword-property">border</span>: 1px #f00;
@@ -872,7 +872,7 @@ nav ul li:<span class="keyword-pseudo-class">after</span> {
 						</pre>
 					</div>
 					<div>
-						<h1>CSS</h1>
+						<h4>CSS</h4>
 						<pre>
 .error, .error--serious {
 	<span class="keyword-property">border</span>: 1px #f00;
@@ -953,9 +953,9 @@ $<span class="keyword-property">theme</span>: neutral;
 					<div>
 						<h4>SCSS</h4>
 						<pre>
-@for $i from 1 to 4 {
-	.btn-#{$i} {
-		background-color: rgb(50*$i, 50*$i, 50*$i);
+<span class="keyword-at">@for</span> $<span class="keyword-property">i</span> from 1 to 4 {
+	.btn-#{$<span class="keyword-property">i</span>} {
+		<span class="keyword-property">background-color</span>: rgb(50*$<span class="keyword-property">i</span>, 50*$<span class="keyword-property">i</span>, 50*$<span class="keyword-property">i</span>);
 	}
 }
 						</pre>
@@ -964,15 +964,15 @@ $<span class="keyword-property">theme</span>: neutral;
 						<h4>CSS</h4>
 						<pre>
 .btn-1 {
-	background-color: #323232;
+	<span class="keyword-property">background-color</span>: #323232;
 }
 
 .btn-2 {
-	background-color: #646464;
+	<span class="keyword-property">background-color</span>: #646464;
 }
 
 .btn-3 {
-	background-color: #969696;
+	<span class="keyword-property">background-color</span>: #969696;
 }
 						</pre>
 					</div>
@@ -984,9 +984,9 @@ $<span class="keyword-property">theme</span>: neutral;
 					<div>
 						<h4>SCSS</h4>
 						<pre>
-@for $i from 1 through 4 {
+<span class="keyword-at">@for</span> $<span class="keyword-property">i</span> from 1 through 4 {
 	.btn-#{$i} {
-		background-color: rgb(50*$i, 50*$i, 50*$i);
+		<span class="keyword-property">background-color</span>: rgb(50*$<span class="keyword-property">i</span>, 50*$<span class="keyword-property">i</span>, 50*$<span class="keyword-property">i</span>);
 	}
 }
 						</pre>
@@ -995,19 +995,19 @@ $<span class="keyword-property">theme</span>: neutral;
 						<h4>CSS</h4>
 						<pre>
 .btn-1 {
-	background-color: #323232;
+	<span class="keyword-property">background-color</span>: #323232;
 }
 
 .btn-2 {
-	background-color: #646464;
+	<span class="keyword-property">background-color</span>: #646464;
 }
 
 .btn-3 {
-	background-color: #969696;
+	<span class="keyword-property">background-color</span>: #969696;
 }
 
 .btn-4 {
-	background-color: #c8c8c8;
+	<span class="keyword-property">background-color</span>: #c8c8c8;
 }
 						</pre>
 					</div>
@@ -1022,7 +1022,99 @@ $<span class="keyword-property">theme</span>: neutral;
 
 				<hr>
 
-				<p></p>
+				<p>Comme pour la directive <code>@for</code>, le but de ses deux autres directives est également de répéter des instructions un certains nombre de fois.</p>
+
+				<h2>@each</h2>
+
+				<p>Contrairement à la directive <code>@for</code>, la directive <code>@each</code> va parcourir une structure telle qu'une liste ou une map.</p>
+				<p>C'est idéal pour les styles répétitifs qui n'ont que quelques variations entre eux.</p>
+				<p>Le bloc est évalué tour à tour pour chaque élément de la liste, qui est affecté au nom de variable donné.</p>
+
+				<div class="content-compare">
+					<div>
+						<h4>SCSS</h4>
+						<pre>
+$<span class="keyword-property">sizes</span>: 40px, 50px, 80px;
+
+<span class="keyword-at">@each</span> $<span class="keyword-property">size</span> in $<span class="keyword-property">sizes</span> {
+	.icon-#{$<span class="keyword-property">size</span>} {
+		<span class="keyword-property">font-size</span>: $<span class="keyword-property">size</span>;
+		<span class="keyword-property">height</span>: $<span class="keyword-property">size</span>;
+		<span class="keyword-property">width</span>: $<span class="keyword-property">size</span>;
+	}
+}
+						</pre>
+					</div>
+					<div>
+						<h4>CSS</h4>
+						<pre>
+.icon-40px {
+	<span class="keyword-property">font-size</span>: 40px;
+	<span class="keyword-property">height</span>: 40px;
+	<span class="keyword-property">width</span>: 40px;
+}
+
+.icon-50px {
+	<span class="keyword-property">font-size</span>: 50px;
+	<span class="keyword-property">height</span>: 50px;
+	<span class="keyword-property">width</span>: 50px;
+}
+
+.icon-80px {
+	<span class="keyword-property">font-size</span>: 80px;
+	<span class="keyword-property">height</span>: 80px;
+	<span class="keyword-property">width</span>: 80px;
+}
+						</pre>
+					</div>
+				</div>
+
+				<h2>@while</h2>
+
+				<p>La directive <code>@while</code> ressemble un peu à la directive <code>@for</code>. Cette dernière comptait de la valeur du début jusqu'à la valeur de fin (non) comprise.</p>
+				<p>Celle-ci va également compter mais tant que sa condition est vraie. Si elle est toujours vraie avec plusieurs itérations, elle continue jusqu'à ce que la condition soit fausse.</p>
+
+				<div class="content-compare">
+					<div>
+						<h4>titre</h4>
+						<pre>
+$<span class="keyword-property">i</span>: 0;
+<span class="keyword-at">@while</span> $<span class="keyword-property">i</span> < 50 {
+	.paddding-#{$<span class="keyword-property">i</span>} { 
+		<span class="keyword-property">padding-left</span>: 1px * $i; 
+	}
+	$<span class="keyword-property">i</span>: $<span class="keyword-property">i</span> + 10;
+}
+						</pre>
+					</div>
+					<div>
+						<h4>titre</h4>
+						<pre>
+.paddding-0 {
+	<span class="keyword-property">padding-left</span>: 0px;
+}
+
+.paddding-10 {
+	<span class="keyword-property">padding-left</span>: 10px;
+}
+
+.paddding-20 {
+	<span class="keyword-property">padding-left</span>: 20px;
+}
+
+.paddding-30 {
+	<span class="keyword-property">padding-left</span>: 30px;
+}
+
+.paddding-40 {
+	<span class="keyword-property">padding-left</span>: 40px;
+}
+						</pre>
+					</div>
+				</div>
+
+				<p>Il ne faut surtout pas oublier l'incrémentation/décrémentation de la variable. Sinon vous risquez d'obtenir une boucle infinie.</p>
+
 			</section>
 
 			<section id="mixins">
