@@ -1,1 +1,31 @@
-/* 01 Syntax - Exercice *//*# sourceMappingURL=exercice.css.map */
+/* 14 Mixins - Exercice */
+
+/*
+ * Ecrire des mixins pour les propriétés CSS3 suivantes.
+ */
+
+.gradient {
+  background-color: #333333;
+  background-image: -webkit-linear-gradient(top, #333333, #888888);
+  background-image: linear-gradient(to bottom, #333333, #888888);
+}
+
+.rotate {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.a3dtransforms {
+  -webkit-perspective: 100px;
+  -ms-perspective: 100px;
+  perspective: 100px;
+
+  -webkit-transform: rotateY(90deg);
+  -ms-transform: rotateY(90deg);
+  transform: rotateY(90deg);
+
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}

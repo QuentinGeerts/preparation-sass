@@ -110,6 +110,15 @@ section h3, section h2 {
   font-style: italic;
 }
 
+
+/*
+ * Footer
+ */
+
+footer {
+  height: 150px;
+}
+
 /*
  * Tools
  */

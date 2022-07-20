@@ -1,29 +1,47 @@
-/* 01 - Syntax Scss */
+/* 14 - Mixins */
 
-/*
- * Ce commentaire sera affiché dans le CSS 
- * parce qu'il respecte la syntaxe CSS
- */
+@mixin featured {
+  font-size: 120%;
+  font-weight: bold;
+  border-color: #ff0000;
+}
 
-$bg-color: #ffffff;
-$text-color: #333;
-$baseline: 1.5em;
+.section {
+  // regular section CSS here
+  @include featured;
+}
 
-body {
-  background-color: $bg-color;
-  color: $text-color;
+@mixin round($radius: 10px) {
+  border-radius: $radius;
 
-  p {
-    color: lighten($color: $text-color, $amount: 10%)
+  @include featured;
+}
+
+.button {
+  @include round(2em);
+}
+
+.another-button {
+  @include round;
+}
+
+@mixin border-box {
+  * {
+    box-sizing: border-box;
   }
-
 }
 
-.container {
-  margin: $baseline * 2; padding: calc($baseline / 2);
+@include border-box;
+
+@mixin box-shadow($args...) {
+  -webkit-box-shadow: $args;
+  box-shadow: $args;
 }
 
-#sidebar ol li,
-footer {
-  padding: $baseline;
+.element {
+  @include box-shadow(1px 1px 5px 0 #000000);
+}
+
+.element-2 {
+  @include box-shadow(1px 1px 5px 0 #000000, 2px 10px 15px rgba(0, 0, 0, .5));
 }

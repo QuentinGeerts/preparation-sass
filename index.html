@@ -44,7 +44,7 @@
 				</li>
 				<li><a href="#each-while-directives">13 - @each and @while directives <i
 							class="fa-solid fa-check text-success"></i></a></li>
-				<li><a href="#mixins">14 - Mixins <i class="fa-solid fa-xmark text-danger"></i></a></li>
+				<li><a href="#mixins">14 - Mixins <i class="fa-solid fa-check text-success"></i></a></li>
 			</ul>
 		</nav>
 
@@ -1124,12 +1124,56 @@ $<span class="keyword-property">i</span>: 0;
 
 				<hr>
 
-				<p></p>
+				<p>Les mixins vous permettent de définir des styles qui peuvent être réutilisés dans votre feuille de style.</p>
+				<p>Nous pourrions le comparer aux <code>@extend</code> cependant, la mixin ne doit pas créer d'autres règles CSS pour pouvoir être héritée.</p>
+				<p>Il suffit de créer une <code>@mixin</code> avec la directive suivi du nom de la mixin. Ensuite il faut définir les différentes règles que composent celle-ci.</p>
+				<p>Une fois la mixin déclarée, il faut utiliser la directive <code>@include nomMixin</code> pour intégrer les instructions de la mixin.</p>
+
+				<p>Vous pouvez définir des valeurs par défaut aux paramètres en préciant avec les deux points la valeur initiale.</p>
+
+				<div class="content-compare">
+					<div>
+						<h4>SCSS</h4>
+						<pre>
+<span class="keyword-at">@mixin</span> <span class="keyword-property">square</span>($size, $radius: 0) {
+	<span class="keyword-property">width</span>: $size;
+	<span class="keyword-property">height</span>: $size;
+
+	<span class="keyword-at">@if</span> $radius != 0 {
+		<span class="keyword-property">border-radius</span>: $radius;
+	}
+}
+
+.avatar {
+	<span class="keyword-at">@include</span> <span class="keyword-property">square</span>(100px, $radius: 4px);
+}
+						</pre>
+					</div>
+					<div>
+						<h4>CSS</h4>
+						<pre>
+.avatar {
+	<span class="keyword-property">width</span>: 100px;
+	<span class="keyword-property">height</span>: 100px;
+	<span class="keyword-property">border-radius</span>: 4px;
+}
+							
+						</pre>
+					</div>
+				</div>
+
+				<p>Les @Mixin peuvent prendre des arguments au nombre indéfini. Pour ce faire, il faut préciser dans les paramètres le <code>...</code> opérateur.</p>
+				<p>Exemple : <code><span class="keyword-at">@mixin</span> nomMixin($args...) { ... }</code></p>
+
 			</section>
 
 		</main>
 
+		<footer>
+			
+		</footer>
 	</div>
+
 
 	<button id="btn-top" onclick="topFunction()"><i class="fa-solid fa-angle-up"></i></button>
 
