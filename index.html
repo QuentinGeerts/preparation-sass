@@ -948,7 +948,8 @@ $<span class="keyword-property">theme</span>: neutral;
 				<p></p>
 
 				<h3>Utilisation du to : (1 à 4 non compris)</h3>
-				<p>Le mot-clé <code>@for</code> utilise le mot-clé <code>to</code> qui spécifie la plage de la valeur de début jusqu'à avant la valeur de fin.</p>
+				<p>Le mot-clé <code>@for</code> utilise le mot-clé <code>to</code> qui spécifie la plage de la valeur de début
+					jusqu'à avant la valeur de fin.</p>
 				<div class="content-compare">
 					<div>
 						<h4>SCSS</h4>
@@ -979,7 +980,8 @@ $<span class="keyword-property">theme</span>: neutral;
 				</div>
 
 				<h3>Utilisation du through : (1 à 4 compris)</h3>
-				<p>Le <code>@for</code> utilise le mot-clé <code>through</code> qui spécifie la plage comprenant à la fois les valeurs de début et de fin.</p>
+				<p>Le <code>@for</code> utilise le mot-clé <code>through</code> qui spécifie la plage comprenant à la fois les
+					valeurs de début et de fin.</p>
 				<div class="content-compare">
 					<div>
 						<h4>SCSS</h4>
@@ -1022,11 +1024,13 @@ $<span class="keyword-property">theme</span>: neutral;
 
 				<hr>
 
-				<p>Comme pour la directive <code>@for</code>, le but de ses deux autres directives est également de répéter des instructions un certains nombre de fois.</p>
+				<p>Comme pour la directive <code>@for</code>, le but de ses deux autres directives est également de répéter des
+					instructions un certains nombre de fois.</p>
 
 				<h2>@each</h2>
 
-				<p>Contrairement à la directive <code>@for</code>, la directive <code>@each</code> va parcourir une structure telle qu'une liste ou une map.</p>
+				<p>Contrairement à la directive <code>@for</code>, la directive <code>@each</code> va parcourir une structure
+					telle qu'une liste ou une map.</p>
 				<p>C'est idéal pour les styles répétitifs qui n'ont que quelques variations entre eux.</p>
 				<p>Le bloc est évalué tour à tour pour chaque élément de la liste, qui est affecté au nom de variable donné.</p>
 
@@ -1071,8 +1075,10 @@ $<span class="keyword-property">sizes</span>: 40px, 50px, 80px;
 
 				<h2>@while</h2>
 
-				<p>La directive <code>@while</code> ressemble un peu à la directive <code>@for</code>. Cette dernière comptait de la valeur du début jusqu'à la valeur de fin (non) comprise.</p>
-				<p>Celle-ci va également compter mais tant que sa condition est vraie. Si elle est toujours vraie avec plusieurs itérations, elle continue jusqu'à ce que la condition soit fausse.</p>
+				<p>La directive <code>@while</code> ressemble un peu à la directive <code>@for</code>. Cette dernière comptait
+					de la valeur du début jusqu'à la valeur de fin (non) comprise.</p>
+				<p>Celle-ci va également compter mais tant que sa condition est vraie. Si elle est toujours vraie avec plusieurs
+					itérations, elle continue jusqu'à ce que la condition soit fausse.</p>
 
 				<div class="content-compare">
 					<div>
@@ -1113,7 +1119,8 @@ $<span class="keyword-property">i</span>: 0;
 					</div>
 				</div>
 
-				<p>Il ne faut surtout pas oublier l'incrémentation/décrémentation de la variable. Sinon vous risquez d'obtenir une boucle infinie.</p>
+				<p>Il ne faut surtout pas oublier l'incrémentation/décrémentation de la variable. Sinon vous risquez d'obtenir
+					une boucle infinie.</p>
 
 			</section>
 
@@ -1125,11 +1132,15 @@ $<span class="keyword-property">i</span>: 0;
 				<hr>
 
 				<p>Les mixins vous permettent de définir des styles qui peuvent être réutilisés dans votre feuille de style.</p>
-				<p>Nous pourrions le comparer aux <code>@extend</code> cependant, la mixin ne doit pas créer d'autres règles CSS pour pouvoir être héritée.</p>
-				<p>Il suffit de créer une <code>@mixin</code> avec la directive suivi du nom de la mixin. Ensuite il faut définir les différentes règles que composent celle-ci.</p>
-				<p>Une fois la mixin déclarée, il faut utiliser la directive <code>@include nomMixin</code> pour intégrer les instructions de la mixin.</p>
+				<p>Nous pourrions le comparer aux <code>@extend</code> cependant, la mixin ne doit pas créer d'autres règles CSS
+					pour pouvoir être héritée.</p>
+				<p>Il suffit de créer une <code>@mixin</code> avec la directive suivi du nom de la mixin. Ensuite il faut
+					définir les différentes règles que composent celle-ci.</p>
+				<p>Une fois la mixin déclarée, il faut utiliser la directive <code>@include nomMixin</code> pour intégrer les
+					instructions de la mixin.</p>
 
-				<p>Vous pouvez définir des valeurs par défaut aux paramètres en préciant avec les deux points la valeur initiale.</p>
+				<p>Vous pouvez définir des valeurs par défaut aux paramètres en préciant avec les deux points la valeur
+					initiale.</p>
 
 				<div class="content-compare">
 					<div>
@@ -1162,7 +1173,8 @@ $<span class="keyword-property">i</span>: 0;
 					</div>
 				</div>
 
-				<p>Les @Mixin peuvent prendre des arguments au nombre indéfini. Pour ce faire, il faut préciser dans les paramètres le <code>...</code> opérateur.</p>
+				<p>Les @Mixin peuvent prendre des arguments au nombre indéfini. Pour ce faire, il faut préciser dans les
+					paramètres le <code>...</code> opérateur.</p>
 				<p>Exemple : <code><span class="keyword-at">@mixin</span> nomMixin($args...) { ... }</code></p>
 
 			</section>
@@ -1170,7 +1182,7 @@ $<span class="keyword-property">i</span>: 0;
 		</main>
 
 		<footer>
-			
+
 		</footer>
 	</div>
 
@@ -1198,4 +1210,4 @@ $<span class="keyword-property">i</span>: 0;
 
 </body>
 
-</html=>
+</html>
