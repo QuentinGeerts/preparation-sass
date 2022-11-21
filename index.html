@@ -31,16 +31,21 @@
 				<li><a href="#introduction">00 - Introduction <i class="fa-solid fa-check text-success"></i></a></li>
 				<li><a href="#syntax">01 - Syntax <i class="fa-solid fa-check text-success"></i></a></li>
 				<li><a href="#nesting">02 - Nesting <i class="fa-solid fa-check text-success"></i></a></li>
-				<li><a href="#nested-properties">03 - Nested Properties <i class="fa-solid fa-check text-success"></i></a></li>
+				<li><a href="#nested-properties">03 - Nested Properties <i
+							class="fa-solid fa-check text-success"></i></a></li>
 				<li><a href="#variables">04 - Variables <i class="fa-solid fa-check text-success"></i></a></li>
 				<li><a href="#interpolation">05 - Interpolation <i class="fa-solid fa-check text-success"></i></a></li>
 				<li><a href="#data-types">06 - Data Types <i class="fa-solid fa-check text-success"></i></a></li>
 				<li><a href="#operations">07 - Operations <i class="fa-solid fa-check text-success"></i></a></li>
-				<li><a href="#import-directive">08 - @import directive <i class="fa-solid fa-check text-success"></i></a></li>
+				<li><a href="#import-directive">08 - @import directive <i
+							class="fa-solid fa-check text-success"></i></a></li>
 				<li><a href="#partials">09 - Partials <i class="fa-solid fa-check text-success"></i></a></li>
-				<li><a href="#media-directive">10 - @media directive <i class="fa-solid fa-check text-success"></i></a></li>
-				<li><a href="#extend-directive">11 - @extend directive <i class="fa-solid fa-check text-success"></i></a></li>
-				<li><a href="#if-for-directives">12 - @if and @for directives <i class="fa-solid fa-check text-success"></i></a>
+				<li><a href="#media-directive">10 - @media directive <i class="fa-solid fa-check text-success"></i></a>
+				</li>
+				<li><a href="#extend-directive">11 - @extend directive <i
+							class="fa-solid fa-check text-success"></i></a></li>
+				<li><a href="#if-for-directives">12 - @if and @for directives <i
+							class="fa-solid fa-check text-success"></i></a>
 				</li>
 				<li><a href="#each-while-directives">13 - @each and @while directives <i
 							class="fa-solid fa-check text-success"></i></a></li>
@@ -58,7 +63,8 @@
 				<hr>
 
 				<p>
-					<abbr title="Syntactically Awesome Style Sheets">Sass</abbr> est un préprocesseur qui permet de compiler et/ou
+					<abbr title="Syntactically Awesome Style Sheets">Sass</abbr> est un préprocesseur qui permet de
+					compiler et/ou
 					interprété du Sass ou Scss en CSS.
 				</p>
 
@@ -98,17 +104,20 @@
 
 				<hr>
 
-				<p>Lorsque nous utilisons Sass, nous avons la posibilité entre deux formes d'écriture : <code>.sass</code> ou
+				<p>Lorsque nous utilisons Sass, nous avons la posibilité entre deux formes d'écriture :
+					<code>.sass</code> ou
 					<code>.scss</code>
 				</p>
-				<p>La syntaxe Scss est une surcouche du CSS, ce qui signifie que toutes les instructions valides en CSS le sont
+				<p>La syntaxe Scss est une surcouche du CSS, ce qui signifie que toutes les instructions valides en CSS
+					le sont
 					également en Scss. Cette syntaxe est plus facile à utiliser grâce à sa ressemblance avec le CSS.</p>
-				<p>La seconde syntaxe est celle d'origine de Sass. Elle s'écrit de manière indentée et sans accolade et point
+				<p>La seconde syntaxe est celle d'origine de Sass. Elle s'écrit de manière indentée et sans accolade et
+					point
 					virgule.</p>
 
 				<div class="content-compare">
 					<div>
-						<h4>Exemple de code en Sass</h4>
+						<h4>Exemple de code en Scss</h4>
 
 						<pre>
 <span class="keyword-at">@mixin</span> button-base() {
@@ -133,7 +142,7 @@
 
 					</div>
 					<div>
-						<h4>Exemple de code en Scss</h4>
+						<h4>Exemple de code en Sass</h4>
 						<pre>
 <span class="keyword-at">@mixin</span> button-base()
 		<span class="keyword-at">@include</span> typography(button)
@@ -166,10 +175,12 @@
 				<hr>
 
 				<p>Nesting signifie <cite>Imbrication</cite> en anglais.</p>
-				<p>Lorsque vous écrivez du code HTML, vous avez probablement remarqué qu'il possède une hiérarchie imbriquée et
+				<p>Lorsque vous écrivez du code HTML, vous avez probablement remarqué qu'il possède une hiérarchie
+					imbriquée et
 					visuelle claire. CSS, en revanche, ne le fait pas.</p>
 				<p>Sass permet d'imbriquer les sélecteurs CSS de la même manière que vous le faite pour HTML.</p>
-				<p>Attention tout de fois que trop imbriquer rendra plus difficile la maintenance du code. C'est généralement
+				<p>Attention tout de fois que trop imbriquer rendra plus difficile la maintenance du code. C'est
+					généralement
 					considéré comme une mauvaise pratique</p>
 
 
@@ -254,7 +265,8 @@ a {
 
 				</div>
 
-				<p>Le sélecteur parent permet de reprendre le nom du parent. Le nom du parent sera injecté dans le code après
+				<p>Le sélecteur parent permet de reprendre le nom du parent. Le nom du parent sera injecté dans le code
+					après
 					compilation.</p>
 
 			</section>
@@ -267,9 +279,12 @@ a {
 				<hr>
 
 				<p>
-					L'utilisation de propriétés imbriquées permet de ne pas répéter plusieurs fois ces propriétés. Nous pouvons
-					écrire comme namespace (espace de noms), le nom de la propriété. Par exemple, toutes les propriétés font
-					(font-style, font-size, font-weight, etc.) peuvent être raccourcies et donc n'écrire qu'une seule fois
+					L'utilisation de propriétés imbriquées permet de ne pas répéter plusieurs fois ces propriétés. Nous
+					pouvons
+					écrire comme namespace (espace de noms), le nom de la propriété. Par exemple, toutes les propriétés
+					font
+					(font-style, font-size, font-weight, etc.) peuvent être raccourcies et donc n'écrire qu'une seule
+					fois
 					l'espace de noms.
 				</p>
 
@@ -330,9 +345,12 @@ a {
 
 				<hr>
 
-				<p>La notion de variable en Sass est la même que dans n'importe quel langage de programmation. Le but étant de
-					stocker une valeur sous un alias et d'utiliser l'alias plutôt que la valeur elle-même à divers endroit. Cela
-					permet ainsi d'éviter de recopier la valeur plusieurs fois mais aussi de ne modifier la valeur qu'à un seul
+				<p>La notion de variable en Sass est la même que dans n'importe quel langage de programmation. Le but
+					étant de
+					stocker une valeur sous un alias et d'utiliser l'alias plutôt que la valeur elle-même à divers
+					endroit. Cela
+					permet ainsi d'éviter de recopier la valeur plusieurs fois mais aussi de ne modifier la valeur qu'à
+					un seul
 					endroit pour toutes les modifier.</p>
 
 				<p>Une variable en Sass s'écrit de la manière suivante :</p>
@@ -363,9 +381,11 @@ p {
 					</div>
 				</div>
 
-				<p><i class="fa-solid fa-triangle-exclamation"></i> La portée des variables ! Lorsqu'une variable est déclarée
+				<p><i class="fa-solid fa-triangle-exclamation"></i> La portée des variables ! Lorsqu'une variable est
+					déclarée
 					dans un bloc, elle n'est accessible uniquement dans ce bloc.</p>
-				<p>Vous pouvez ajouter un !global à la fin d'une déclaration de variable pour passer la variable globale et plus
+				<p>Vous pouvez ajouter un !global à la fin d'une déclaration de variable pour passer la variable globale
+					et plus
 					locale</p>
 
 			</section>
@@ -377,7 +397,8 @@ p {
 
 				<hr>
 
-				<p>L'interpolation est fortement utilisé dans Sass. Elle permet d'intégrer un résultat dans une expression.</p>
+				<p>L'interpolation est fortement utilisé dans Sass. Elle permet d'intégrer un résultat dans une
+					expression.</p>
 				<p>Il suffit juste d'écrire une expression entre moustache précédé d'un diese.</p>
 				<code>#{ expression }</code>
 
@@ -416,7 +437,8 @@ p {
 
 				<hr>
 
-				<p>Le type de données est le type d'une information qui nécessite de déclarer le type de données pour chaque
+				<p>Le type de données est le type d'une information qui nécessite de déclarer le type de données pour
+					chaque
 					objet de données.</p>
 				<p>Il existe plusieurs types de données tels que : </p>
 
@@ -425,27 +447,32 @@ p {
 
 				<p>Exemple : <code>12</code> <code>100px</code> <code>5px * 2px</code> <code>5.2e3</code></p>
 
-				<p><i class="fa-solid fa-triangle-exclamation"></i> Lors des opérations, vous ne pouvez pas calculer 2 unités
-					différentes. Pour régler le soucis, vous pouvez donner une unité à la première valeur et omettre la suivante.
+				<p><i class="fa-solid fa-triangle-exclamation"></i> Lors des opérations, vous ne pouvez pas calculer 2
+					unités
+					différentes. Pour régler le soucis, vous pouvez donner une unité à la première valeur et omettre la
+					suivante.
 				</p>
 
 
 				<h3>Strings</h3>
 				<p>Les chaines de caractères sont des séquences de caractères.</p>
-				<p>Sass supporte deux types de chaînes de caractères : les chaînes entre guillemets, comme "Helvetica Neue", et
+				<p>Sass supporte deux types de chaînes de caractères : les chaînes entre guillemets, comme "Helvetica
+					Neue", et
 					les chaînes sans guillements (également appelées identificateurs)</p>
 
 				<p>Exemple : <code>".widget:hover"</code> <code>bold</code></p>
 
 				<p>Vous pouvez utiliser la fonction <code>string.unquote(".widget:hover"); // .widget:hover</code> ou la
-					fonction <code>string.quote(bold); // "bold" </code> pour récupérer une chaine de caractères entre guillemets
+					fonction <code>string.quote(bold); // "bold" </code> pour récupérer une chaine de caractères entre
+					guillemets
 					ou pas.</p>
 
 				<p>Pour échapper un caractère, vous pouvez utiliser le caractère d'échappement : <code>\</code></p>
 
 
 				<h3>Colors</h3>
-				<p>Sass intègre un support pour les valeurs des couleurs. Il est possible de créer des couleurs de plusieurs
+				<p>Sass intègre un support pour les valeurs des couleurs. Il est possible de créer des couleurs de
+					plusieurs
 					façons : </p>
 				<div class="content-compare">
 					<div>
@@ -462,22 +489,31 @@ p {
 				</div>
 
 				<h3>Lists</h3>
-				<p>Les listes continennent une séquence d'autres valeurs. Dans Sass, les éléments des listes peuvent être
-					séparés par des virgules (Helvetica, Arial, sans-serif), des espaces (10px 15px 0 0) ou des barres obliques
+				<p>Les listes continennent une séquence d'autres valeurs. Dans Sass, les éléments des listes peuvent
+					être
+					séparés par des virgules (Helvetica, Arial, sans-serif), des espaces (10px 15px 0 0) ou des barres
+					obliques
 					tant qu'ils sont cohérents dans la liste.</p>
 
-				<p>Contrairement aux autres langages, les listes dans Sass ne nécessitent pas de crochets spéciaux ; toutes les
+				<p>Contrairement aux autres langages, les listes dans Sass ne nécessitent pas de crochets spéciaux ;
+					toutes les
 					expressions séparées par des espaces ou des virgules comptent comme une liste.</p>
 
-				<p>Exemple : <code>margin: 10px auto 15px;</code> <code>font-family: Arial, Helvetica, sans-serif;</code></p>
+				<p>Exemple : <code>margin: 10px auto 15px;</code>
+					<code>font-family: Arial, Helvetica, sans-serif;</code>
+				</p>
 
 
 				<h3>Maps</h3>
-				<p>Les maps sont des listes qui contiennent des paires de clefs et de valeurs. Pour récupérer une valeur, il
-					faudra entrer la clef associée. Dans le même principe qu'un dictionnaire avec des mots et leur définition.</p>
-				<p>Les maps sont stockées dans une variable et construites entre parenthèse. Chaque paires est construite en
+				<p>Les maps sont des listes qui contiennent des paires de clefs et de valeurs. Pour récupérer une
+					valeur, il
+					faudra entrer la clef associée. Dans le même principe qu'un dictionnaire avec des mots et leur
+					définition.</p>
+				<p>Les maps sont stockées dans une variable et construites entre parenthèse. Chaque paires est
+					construite en
 					stipulant <code>expression: valeur</code> et séparées par une virgule.</p>
-				<p>Comme chaque valeur est définie par une clef, celle-ci doit être unique au sein de la map. Il ne peut donc
+				<p>Comme chaque valeur est définie par une clef, celle-ci doit être unique au sein de la map. Il ne peut
+					donc
 					pas avoir deux clefs identiques.</p>
 
 				<p>Exemple : <code>$font-weights: ("regular": 400, "medium": 500, "bold": 700);</code>
@@ -489,8 +525,10 @@ p {
 				</p>
 
 				<h3>Booleans</h3>
-				<p>Les bolléens sont des valeurs logiques vrai et faux. En plus de leurs formes littérales, les booléens sont
-					renvoyés par des opérateurs d'égalité et relationnels, ainsi que par de nombreuses fonctions intégrées telles
+				<p>Les bolléens sont des valeurs logiques vrai et faux. En plus de leurs formes littérales, les booléens
+					sont
+					renvoyés par des opérateurs d'égalité et relationnels, ainsi que par de nombreuses fonctions
+					intégrées telles
 					que <code>math.comparable()</code> ou <code>map.has-key()</code></p>
 
 				<div class="content-compare">
@@ -548,7 +586,8 @@ p {
 					seulement pour les nombres avec la même unité (px => px, vh => vh, etc...)</p>
 
 				<p>Les deux membres de part et d'autre du signe sont calculés sur base de l'unité à gauche du signe.</p>
-				<p>Attention lors d'une multiplication, l'unité y est également multiplié, il faut donc l'omettre pour la partie
+				<p>Attention lors d'une multiplication, l'unité y est également multiplié, il faut donc l'omettre pour
+					la partie
 					de droite.</p>
 				<code>12px + 12px // 24px</code>
 				<code>1in - 10px; // 0.8958333333in</code>
@@ -559,16 +598,19 @@ p {
 
 				<h3>Opérateurs d'égalité : <code>==</code> <code>!=</code></h3>
 
-				<p>Les opérateurs d'égalité permettent de vérifier l'égalité entre le membre de gauche et celui de droite du
+				<p>Les opérateurs d'égalité permettent de vérifier l'égalité entre le membre de gauche et celui de
+					droite du
 					signe.</p>
-				<p><code>==</code> vérifie si les deux valeurs sont les mêmes. Dans le cas où ils sont les mêmes, la valeur
+				<p><code>==</code> vérifie si les deux valeurs sont les mêmes. Dans le cas où ils sont les mêmes, la
+					valeur
 					<code>true</code> est renvoyée, dans le cas contraire <code>false</code>.
 				</p>
 				<p><code>!=</code> fait l'inverse du <code>==</code>.</p>
 
 				<h3>Opérateurs relationnels : <code><</code> <code>></code> <code><=</code> <code>>=</code></h3>
 
-				<p>L'opérateur relationnels déterminent si les nombres sont plus grands ou plus petits les uns que les autres.
+				<p>L'opérateur relationnels déterminent si les nombres sont plus grands ou plus petits les uns que les
+					autres.
 					Ils convertissent automatiquement entre les unités compatibles.</p>
 
 				<p><code>></code> retourne si le premier élément est supérieur par rapport au second.</p>
@@ -580,10 +622,12 @@ p {
 
 				<p>La concaténation permet de coller deux valeurs ensemble. (cfr. Interpolation).</p>
 
-				<p><code>+</code> retourne une chaine de caractères contenant les deux expressions. Si l'expression de gauche
+				<p><code>+</code> retourne une chaine de caractères contenant les deux expressions. Si l'expression de
+					gauche
 					est entre guillemet, le résultat le sera également. Sans guillemet dans le cas contraire.</p>
 
-				<p><code>-</code> retourne une chaine de caractères sans guillemet contenant les deux expressions séparées par
+				<p><code>-</code> retourne une chaine de caractères sans guillemet contenant les deux expressions
+					séparées par
 					-.</p>
 				<p>Il s'agit d'un ancien opérateur, utilisez l'interpolation à la place.</p>
 
@@ -592,7 +636,8 @@ p {
 				<p>Contrairement aux autres langages, Sass utilise des mots plutôt que des symbales pour les opérateurs
 					booléens.</p>
 
-				<p><code>not</code> retourne la valeur opposée de l'expression. Elle transforme vrai en faux et faux en vrai.
+				<p><code>not</code> retourne la valeur opposée de l'expression. Elle transforme vrai en faux et faux en
+					vrai.
 				</p>
 				<p><code>and</code> retourne vrai si la valeur des deux expressions est à vrai. Sinon faux.</p>
 				<p><code>or</code> retourne vrai si l'une des valeurs des deux expression est à vrai. Sinon faux.</p>
@@ -606,11 +651,15 @@ p {
 
 				<hr>
 
-				<p>Sass étend la règle @import de CSS avec la possibilité d'importer des feuilles de style Sass et Css.</p>
-				<p>Ainsi nous pouvons importer des mixins, fonctions, variables et plusieurs feuilles de styles ensemble.</p>
-				<p>L'import se fait dès la compilation contrairement aux imports css qui réalisent des requêtes HTTP.</p>
+				<p>Sass étend la règle @import de CSS avec la possibilité d'importer des feuilles de style Sass et Css.
+				</p>
+				<p>Ainsi nous pouvons importer des mixins, fonctions, variables et plusieurs feuilles de styles
+					ensemble.</p>
+				<p>L'import se fait dès la compilation contrairement aux imports css qui réalisent des requêtes HTTP.
+				</p>
 
-				<p><i class="fa-solid fa-triangle-exclamation"></i> la directive <code>@import</code> va devenir dépréciée. Il
+				<p><i class="fa-solid fa-triangle-exclamation"></i> la directive <code>@import</code> va devenir
+					dépréciée. Il
 					faudra priorisé la directive <code>@use</code> à la place. </p>
 				<p>Plus d'informations au lien suivant : <a
 						href="https://sass-lang.com/documentation/at-rules/import">https://sass-lang.com/documentation/at-rules/import</a>
@@ -671,15 +720,18 @@ ul ul, ol ol {
 				</div>
 
 				<p>
-					Ce ne serait pas amusant d'écrire des URL absolues pour chaque feuille de style que vous importez, donc
+					Ce ne serait pas amusant d'écrire des URL absolues pour chaque feuille de style que vous importez,
+					donc
 					l'algorithme de Sass pour trouver un fichier à importer le rend un peu plus facile.
 				</p>
 				<p>
-					Pour commencer, vous n'avez pas besoin d'écrire explicitement l'extension du fichier que vous souhaitez
+					Pour commencer, vous n'avez pas besoin d'écrire explicitement l'extension du fichier que vous
+					souhaitez
 					importer
 				</p>
 
-				<p>Exemple : <code>@import "variables"</code> va automatiquement charger variables.scss, variables.sass, ou
+				<p>Exemple : <code>@import "variables"</code> va automatiquement charger variables.scss, variables.sass,
+					ou
 					variables.css</p>
 
 
@@ -692,12 +744,14 @@ ul ul, ol ol {
 
 				<hr>
 
-				<p>Les fichiers partiels sont des fichiers destinés à être importés uniquement. Pour indiquer au compilateur que
+				<p>Les fichiers partiels sont des fichiers destinés à être importés uniquement. Pour indiquer au
+					compilateur que
 					ce sont des fichiers partiels, nous indiqueront un "_" devant les noms des fichiers.</p>
 
 				<p>Exemple : <code>_variables.scss</code></p>
 
-				<p>Lorsque le compilateur compile tous les fichiers, les fichiers partiels sont ignorés et ne sont qu'importés
+				<p>Lorsque le compilateur compile tous les fichiers, les fichiers partiels sont ignorés et ne sont
+					qu'importés
 					dans les fichiers avec un @import à l'intérieur.</p>
 
 				<p>Pour voir un exemple, rendez-vous dans l'exemple du précédent chapitre. (cfr. <a
@@ -743,7 +797,8 @@ pre, code {
 
 				<hr>
 
-				<p>L'avantage d'utiliser les @media avec Sass est que vous n'avez pas besoin de réécrire le.s chemin.s si vous
+				<p>L'avantage d'utiliser les @media avec Sass est que vous n'avez pas besoin de réécrire le.s chemin.s
+					si vous
 					les modifier</p>
 				<p>Vous pourrez ainsi imbriquer les @media dans votre structure scss.</p>
 
@@ -823,11 +878,14 @@ nav ul li:<span class="keyword-pseudo-class">after</span> {
 				<hr>
 
 				<p>
-					Il y a souvent des cas lors de la conception d'une page où une classe doit avoir tous les styles d'une autre
+					Il y a souvent des cas lors de la conception d'une page où une classe doit avoir tous les styles
+					d'une autre
 					classe, ainsi que ses propres styles spécifiques
 				</p>
-				<p>Par exemple, lors de la création d'une div avec une erreur, nous précisons parfois 2 classes. L'un pour
-					indiquer que l'élément est une erreur et la deuxième pour signaler le niveau d'erreur. (fonctionne également
+				<p>Par exemple, lors de la création d'une div avec une erreur, nous précisons parfois 2 classes. L'un
+					pour
+					indiquer que l'élément est une erreur et la deuxième pour signaler le niveau d'erreur. (fonctionne
+					également
 					avec d'autres types de div)</p>
 				<div class="content-compare">
 					<div>
@@ -843,7 +901,7 @@ nav ul li:<span class="keyword-pseudo-class">after</span> {
 						<pre>
 .error {
 	<span class="keyword-property">order</span>: 1px #f00;
-	<span class="keyword-property">ackground-color</span>: #fdd;
+	<span class="keyword-property">background-color</span>: #fdd;
 }
 
 .error--serious {
@@ -853,7 +911,8 @@ nav ul li:<span class="keyword-pseudo-class">after</span> {
 					</div>
 				</div>
 
-				<p>Pour une raison de facilité d'écriture, il est préférable de faire hériter une classe à une autre classe.
+				<p>Pour une raison de facilité d'écriture, il est préférable de faire hériter une classe à une autre
+					classe.
 					Ainsi nous ne devons plus réécrire les propriétés en commun.</p>
 
 				<div class="content-compare">
@@ -885,7 +944,8 @@ nav ul li:<span class="keyword-pseudo-class">after</span> {
 					</div>
 				</div>
 
-				<p><i class="fa-solid fa-triangle-exclamation"></i> Attention, vous ne pouvez pas @extend un sélecteur en dehors
+				<p><i class="fa-solid fa-triangle-exclamation"></i> Attention, vous ne pouvez pas @extend un sélecteur
+					en dehors
 					du sélecteur dans lequel vous êtes.</p>
 
 			</section>
@@ -898,13 +958,16 @@ nav ul li:<span class="keyword-pseudo-class">after</span> {
 				<hr>
 
 				<h2>@if directive</h2>
-				<p>Une structure conditionnelle permet d'exécuter un bloc d'instructions en cas de validité de la condition.</p>
-				<p>Si la condition est vérifiée, le bloc d'instructions dans le cas où elle est vérifiée est exécuté. Sinon, le
+				<p>Une structure conditionnelle permet d'exécuter un bloc d'instructions en cas de validité de la
+					condition.</p>
+				<p>Si la condition est vérifiée, le bloc d'instructions dans le cas où elle est vérifiée est exécuté.
+					Sinon, le
 					bloc d'instruction dans le cas où elle n'est pas vérifiée est exécuté.</p>
 
 				<p>La règle <code>@if</code> peut être accompagnée de l'instruction <code>@else</code> pour réaliser les
 					instructions dans le cas où la condition n'est pas vérifiée.</p>
-				<p>Une règle supplémentaire existe également, <code>@else if</code> peut être ajouté un nombre indéterminé de
+				<p>Une règle supplémentaire existe également, <code>@else if</code> peut être ajouté un nombre
+					indéterminé de
 					fois où nous souhaitons vérifier d'autres conditions.</p>
 
 				<p>Le résultat de la condition est une valeur booléenne. (true ou false)</p>
@@ -944,11 +1007,13 @@ $<span class="keyword-property">theme</span>: neutral;
 
 				<h2>@for directive</h2>
 
-				<p>La directive <code>@for</code> permet de compter vers le haut ou vers le bas d'un nombre à un autre.</p>
+				<p>La directive <code>@for</code> permet de compter vers le haut ou vers le bas d'un nombre à un autre.
+				</p>
 				<p></p>
 
 				<h3>Utilisation du to : (1 à 4 non compris)</h3>
-				<p>Le mot-clé <code>@for</code> utilise le mot-clé <code>to</code> qui spécifie la plage de la valeur de début
+				<p>Le mot-clé <code>@for</code> utilise le mot-clé <code>to</code> qui spécifie la plage de la valeur de
+					début
 					jusqu'à avant la valeur de fin.</p>
 				<div class="content-compare">
 					<div>
@@ -980,7 +1045,8 @@ $<span class="keyword-property">theme</span>: neutral;
 				</div>
 
 				<h3>Utilisation du through : (1 à 4 compris)</h3>
-				<p>Le <code>@for</code> utilise le mot-clé <code>through</code> qui spécifie la plage comprenant à la fois les
+				<p>Le <code>@for</code> utilise le mot-clé <code>through</code> qui spécifie la plage comprenant à la
+					fois les
 					valeurs de début et de fin.</p>
 				<div class="content-compare">
 					<div>
@@ -1024,15 +1090,18 @@ $<span class="keyword-property">theme</span>: neutral;
 
 				<hr>
 
-				<p>Comme pour la directive <code>@for</code>, le but de ses deux autres directives est également de répéter des
+				<p>Comme pour la directive <code>@for</code>, le but de ses deux autres directives est également de
+					répéter des
 					instructions un certains nombre de fois.</p>
 
 				<h2>@each</h2>
 
-				<p>Contrairement à la directive <code>@for</code>, la directive <code>@each</code> va parcourir une structure
+				<p>Contrairement à la directive <code>@for</code>, la directive <code>@each</code> va parcourir une
+					structure
 					telle qu'une liste ou une map.</p>
 				<p>C'est idéal pour les styles répétitifs qui n'ont que quelques variations entre eux.</p>
-				<p>Le bloc est évalué tour à tour pour chaque élément de la liste, qui est affecté au nom de variable donné.</p>
+				<p>Le bloc est évalué tour à tour pour chaque élément de la liste, qui est affecté au nom de variable
+					donné.</p>
 
 				<div class="content-compare">
 					<div>
@@ -1075,9 +1144,11 @@ $<span class="keyword-property">sizes</span>: 40px, 50px, 80px;
 
 				<h2>@while</h2>
 
-				<p>La directive <code>@while</code> ressemble un peu à la directive <code>@for</code>. Cette dernière comptait
+				<p>La directive <code>@while</code> ressemble un peu à la directive <code>@for</code>. Cette dernière
+					comptait
 					de la valeur du début jusqu'à la valeur de fin (non) comprise.</p>
-				<p>Celle-ci va également compter mais tant que sa condition est vraie. Si elle est toujours vraie avec plusieurs
+				<p>Celle-ci va également compter mais tant que sa condition est vraie. Si elle est toujours vraie avec
+					plusieurs
 					itérations, elle continue jusqu'à ce que la condition soit fausse.</p>
 
 				<div class="content-compare">
@@ -1119,7 +1190,8 @@ $<span class="keyword-property">i</span>: 0;
 					</div>
 				</div>
 
-				<p>Il ne faut surtout pas oublier l'incrémentation/décrémentation de la variable. Sinon vous risquez d'obtenir
+				<p>Il ne faut surtout pas oublier l'incrémentation/décrémentation de la variable. Sinon vous risquez
+					d'obtenir
 					une boucle infinie.</p>
 
 			</section>
@@ -1131,12 +1203,16 @@ $<span class="keyword-property">i</span>: 0;
 
 				<hr>
 
-				<p>Les mixins vous permettent de définir des styles qui peuvent être réutilisés dans votre feuille de style.</p>
-				<p>Nous pourrions le comparer aux <code>@extend</code> cependant, la mixin ne doit pas créer d'autres règles CSS
+				<p>Les mixins vous permettent de définir des styles qui peuvent être réutilisés dans votre feuille de
+					style.</p>
+				<p>Nous pourrions le comparer aux <code>@extend</code> cependant, la mixin ne doit pas créer d'autres
+					règles CSS
 					pour pouvoir être héritée.</p>
-				<p>Il suffit de créer une <code>@mixin</code> avec la directive suivi du nom de la mixin. Ensuite il faut
+				<p>Il suffit de créer une <code>@mixin</code> avec la directive suivi du nom de la mixin. Ensuite il
+					faut
 					définir les différentes règles que composent celle-ci.</p>
-				<p>Une fois la mixin déclarée, il faut utiliser la directive <code>@include nomMixin</code> pour intégrer les
+				<p>Une fois la mixin déclarée, il faut utiliser la directive <code>@include nomMixin</code> pour
+					intégrer les
 					instructions de la mixin.</p>
 
 				<p>Vous pouvez définir des valeurs par défaut aux paramètres en préciant avec les deux points la valeur
@@ -1191,20 +1267,20 @@ $<span class="keyword-property">i</span>: 0;
 
 
 	<script>
-		var btnTop = document.getElementById("btn-top")
+		var btnTop = document.getElementById("btn-top");
 
 		window.onscroll = () => {
 			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-				btnTop.style.display = "block"
+				btnTop.style.display = "block";
 			} else {
-				btnTop.style.display = "none"
+				btnTop.style.display = "none";
 			}
-		}
+		};
 
 		// When the user clicks on the button, scroll to the top of the document
 		function topFunction () {
-			document.body.scrollTop = 0
-			document.documentElement.scrollTop = 0
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
 		}
 	</script>
 
